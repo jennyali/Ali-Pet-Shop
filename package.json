@@ -1,0 +1,33 @@
+{
+  "name": "newwebsite",
+  "version": "1.0.0",
+  "description": "not decided yet",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jennyali/newProject.git"
+  },
+  "author": "J P Ali",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jennyali/newProject/issues"
+  },
+  "homepage": "https://github.com/jennyali/newProject#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-sass": "^3.0.0",
+    "gulp-sourcemaps": "^1.9.1",
+    "jquery": "^3.1.1",
+    "lodash": "^4.17.4",
+    "mongoose": "^4.7.6",
+    "morgan": "^1.7.0",
+    "normalize.css": "^5.0.0"
+  }
+}
