@@ -1,0 +1,84 @@
+/*===========================
+        GLOBAL VARIABLES
+=============================*/
+
+/* color
+-----------------------*/
+
+$colors : (
+    primary: #2B5D9B,
+    secondary: #2C3999,
+    contrast: #3DBFBD,
+    light: #FFFFFF,
+    dark: lighten(#000000, 30%),
+);
+
+$primary-color: map-get($map: $colors, $key: primary);
+$secondary-color: map-get($map: $colors, $key: secondary);
+$contrast-color: map-get($map: $colors, $key: contrast);
+$dark: map-get($map: $colors, $key: dark);
+$light: map-get($map: $colors, $key: light);
+$grey: lighten(map-get($map: $colors, $key: dark), 10%);
+
+
+/* font-families
+-----------------------*/
+
+$font-family-logo: 'Roboto', sans-serif;
+$font-family-heading: 'Lato', sans-serif;
+$font-family-paragraph: 'Open Sans', sans-serif;
+
+
+/* font-size
+-----------------------*/
+// BS default = 14px
+
+$font-size: (
+    xxlg: 36px,
+    xlg: 28px,
+    lg: 24px,
+    md: 16px,
+    base: 14px,
+    sm: 12px,
+    xs: 10px,
+);
+
+$font-size-xxlg:  map-get($map: $font-size, $key: xxlg);
+$font-size-xlg:  map-get($map: $font-size, $key: xlg);
+$font-size-lg:  map-get($map: $font-size, $key: lg);
+$font-size-md:  map-get($map: $font-size, $key: md);
+$font-size-base:  map-get($map: $font-size, $key: base);
+$font-size-sm:  map-get($map: $font-size, $key: sm);
+$font-size-xs:  map-get($map: $font-size, $key: xs);
+
+
+/* margin/padding sizing
+-----------------------*/
+// BS default = 15px
+// mp = margin/padding
+
+$mp-sm: 10px;
+$mp-default: 15px;
+$mp-lg: 20px;
+$mp-double: 30px;
+$mp-triple: 60px;
+
+/* breakpoints
+-----------------------*/
+// bp = breakpoint
+
+$breakpoints: (
+    sm: 768px,
+    md: 992px,
+    lg: 1200px,
+);
+
+$bp-sm: map-get($map: $breakpoints, $key: sm);
+$bp-md: map-get($map: $breakpoints, $key: md);
+$bp-lg: map-get($map: $breakpoints, $key: lg);
+
+/*===========================================
+
+            ELEMENT VARIABLES
+
+==============================================*/
