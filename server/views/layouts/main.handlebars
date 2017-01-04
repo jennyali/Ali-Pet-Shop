@@ -10,8 +10,48 @@
     <title>New App</title>
 </head>
 <body>
+    <header id="app__header" class="container">
+        <div class="row">
+            <figure id="app__header__logo" class="col-sm-4 col-sm-offset-4">
+                <img src="/assets/images/app-logo.png" class="app-logo">
+                <figcaption class="logo__text">
+                    <h4 class="text-center">PET STORE</h4>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="row">
+            <nav id="app__header__nav" class="navbar navbar-default">
+                <ul class="nav nav-tabs nav-justified">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Our Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div> 
+    </header>
 
     {{{body}}}
+
+
+    <footer id="app__footer" class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <p>2017 by Puurfect. Created by Ali</p>
+                <ul class="list-unstyled list-inline">
+                    <li><span class="icon-facebook"></span></li>
+                    <li><span class="icon-google-plus"></span></li>
+                    <li><span class="icon-twitter"></span></li>
+                </ul>
+            </div>
+            <div class="col-sm-6 text-right">
+                <p>123-456-7890 | 123-456-7890 <br />
+                    info@mysite.com <br />
+                    500 Terry Francois St, San Francisco, CA 94158
+                </p>
+            </div>
+        </div>
+    </footer>
 
     <script src="/assets/lib/bower_components/jquery/dist/jquery.js"></script>
     <script src="/assets/scripts/bootstrap.js"></script>
