@@ -3141,7 +3141,7 @@ tbody.collapse.in {
   border-radius: 4px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   background-clip: padding-box; }
-  .dropdown-menu.pull-right {
+  .pull-right.dropdown-menu {
     right: 0;
     left: auto; }
   .dropdown-menu .divider {
@@ -5752,8 +5752,14 @@ button.close {
 /*===========================
         MIXINS
 =============================*/
-.container {
-  width: 800px; }
+@media (min-width: 1200px) {
+  .container {
+    width: 900px; } }
+
+.dropdown-menu {
+  text-align: center;
+  width: 100%;
+  display: inline-block; }
 
 /** NAV styles */
 .nav-styles--base li, #app__header #app__header__nav li, .nav-styles--base p, #app__header #app__header__nav p, .nav-styles--base a, #app__header #app__header__nav a {

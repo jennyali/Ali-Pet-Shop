@@ -7,6 +7,10 @@
     <link href="https://file.myfontastic.com/ncjQH3qL3iqtxPyrLNBQDo/icons.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans|Roboto:300" rel="stylesheet">
     <link href="/assets/styles/styles.css" rel="stylesheet" type="text/css">
+    <link href="/assets/lib/bower_components/fullcalendar/dist/fullcalendar.css" rel="stylesheet"/>
+    <script src='/assets/lib/bower_components/jquery/dist/jquery.min.js'></script>
+    <script src='/assets/lib/bower_components/moment/min/moment.min.js'></script>
+    <script src='/assets/lib/bower_components/fullcalendar/dist/fullcalendar.js'></script>
 
     <title>New App</title>
 </head>
@@ -33,14 +37,22 @@
                     <li>
                         <a href="/services">Our Services</a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Grooming</a><li>
-                            <li><a href="#">Pet accessories</a><li>
-                            <li><a href="#">Pet Hotel</a><li>
+                            <li><a href="/services/grooming">Grooming</a><li>
+                            <li><a href="/services/petaccess">Pet accessories</a><li>
+                            <li><a href="/services/pethotel">Pet Hotel</a><li>
                         </ul>
                     </li>
                     <li><a href="/contact">Contact</a></li>
                 </ul>
             </nav>
+        </div>
+        <div class="container-fluid navbar navbar-fixed-top">
+            <ul class="nav nav-pills nav-stacked navbar-right">
+                <li><span class="icon-facebook"></span></li>
+                <li><span class="icon-google-plus"></span></li>
+                <li><span class="icon-twitter"></span></li>
+                <li><span class="icon-share-alt"></span></li>
+            </ul>
         </div> 
     </header>
 
@@ -66,7 +78,6 @@
         </div>
     </footer>
 
-    <script src="/assets/lib/bower_components/jquery/dist/jquery.js"></script>
     <script src="/assets/scripts/bootstrap.js"></script>
     <script src="/assets/scripts/main.js"></script>
 

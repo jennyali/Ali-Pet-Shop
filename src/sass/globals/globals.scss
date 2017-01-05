@@ -1,7 +1,7 @@
 
 .container {
     @include mediaQ--min($bp-lg){
-        width: 800px;
+        width: 900px;
     }
 }
 
