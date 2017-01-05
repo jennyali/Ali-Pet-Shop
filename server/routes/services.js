@@ -5,6 +5,7 @@ var controller = require('../controllers/servicesController');
 var groomingcontroller = require('../controllers/groomingController');
 var petaccesscontroller = require('../controllers/petaccessController');
 var petHotelcontroller = require('../controllers/petHotelController');
+var privateServicesController = require('../controllers/privateServicesController');
 
 router
     .route('/')
@@ -21,5 +22,9 @@ router
 router
     .route('/pethotel')
     .get(petHotelcontroller);
+
+router
+    .route('/privateServices')
+    .get(privateServicesController);
 
 module.exports = router;
