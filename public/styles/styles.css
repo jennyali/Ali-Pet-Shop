@@ -5752,6 +5752,9 @@ button.close {
 /*===========================
         MIXINS
 =============================*/
+.container {
+  width: 800px; }
+
 /** NAV styles */
 .nav-styles--base li, #app__header #app__header__nav li, .nav-styles--base p, #app__header #app__header__nav p, .nav-styles--base a, #app__header #app__header__nav a {
   color: #4281A4; }
@@ -5794,6 +5797,14 @@ button.close {
     font-family: "Roboto", sans-serif; }
   .carousel--type1 .carousel-text__wrapper h1, #section__home-carousel .carousel-text__wrapper h1, #home-wrapper .carousel-text__wrapper h1 {
     font-size: 72px; }
+
+.parallax {
+  background-image: url("../images/largedogimage.jpeg");
+  height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
 
 /** APP HEADER */
 #app__header h1, #app__header h2, #app__header h3, #app__header h4 {

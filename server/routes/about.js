@@ -1,10 +1,11 @@
 /** ABOUT ROUTE */
 
 var router = require('express').Router();
-var controller = require('../controllers/aboutController');
+var aboutcontroller = require('../controllers/aboutController');
+
 
 router
     .route('/')
-    .get(controller);
+    .get(aboutcontroller);
 
 module.exports = router;

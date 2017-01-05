@@ -1,0 +1,14 @@
+
+.container {
+    @include mediaQ--min($bp-lg){
+        width: 800px;
+    }
+}
+
+.dropdown-menu {
+    @extend .dropdown-menu;
+
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+}
