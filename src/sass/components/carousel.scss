@@ -1,0 +1,59 @@
+/** Carousel **/
+
+.carousel--type1 {
+    .carousel-slide {}
+
+        .carousel-indicators {
+
+            li{}
+        }
+    
+    .carousel-inner {
+        height: 700px;
+    }
+
+        .item {
+            height: 100%;
+            position: relative;
+
+            img{
+                max-width: 40%;
+                position: absolute;
+                bottom: 0px;
+            }
+        }
+
+        .item-one {
+            background: $secondary-color;
+        }
+
+        .item-two {
+            background: $contrast-color;
+                img{
+                    max-width: 30%;
+                    right: 0px;
+                    bottom: 0px;
+            }
+        }
+
+        .item-three {
+            background: $extra-color;
+        }
+    
+    .carousel-text__wrapper{
+        @include tiText__font-family--base;
+        position: absolute;
+        left: 50%;
+        top: 25%;
+        transform: translateX(-50%);
+        max-width: 380px;
+        color: $light;
+
+        h1{
+            font-size: 72px;
+        }
+
+        p{}
+    }
+
+}

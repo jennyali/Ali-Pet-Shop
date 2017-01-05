@@ -6,9 +6,10 @@
 -----------------------*/
 
 $colors : (
-    primary: #2B5D9B,
-    secondary: #2C3999,
-    contrast: #3DBFBD,
+    primary: #4281A4,
+    secondary: #9CAFB7,
+    contrast: #FE938C,
+    extra: #E6B89C,
     light: #FFFFFF,
     dark: lighten(#000000, 30%),
 );
@@ -16,6 +17,7 @@ $colors : (
 $primary-color: map-get($map: $colors, $key: primary);
 $secondary-color: map-get($map: $colors, $key: secondary);
 $contrast-color: map-get($map: $colors, $key: contrast);
+$extra-color: map-get($map: $colors, $key: extra);
 $dark: map-get($map: $colors, $key: dark);
 $light: map-get($map: $colors, $key: light);
 $grey: lighten(map-get($map: $colors, $key: dark), 10%);
@@ -24,9 +26,9 @@ $grey: lighten(map-get($map: $colors, $key: dark), 10%);
 /* font-families
 -----------------------*/
 
-$font-family-logo: 'Roboto', sans-serif;
-$font-family-heading: 'Lato', sans-serif;
-$font-family-paragraph: 'Open Sans', sans-serif;
+$font-family-logo: 'Bubblegum Sans', cursive;
+$font-family-heading: 'Bubblegum Sans', cursive;
+$font-family-paragraph: 'Roboto', sans-serif;
 
 
 /* font-size

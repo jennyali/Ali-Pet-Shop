@@ -1,0 +1,43 @@
+/*===========================
+        MIXINS
+=============================*/
+
+// Font family 
+@mixin tiText__font-family--base{
+    h1, h2, h3, h4 {
+        font-family: $font-family-heading;
+    }
+
+    p, li, a {
+        font-family: $font-family-paragraph;
+    }
+}
+
+// Font Colors
+@mixin tiText__colors($sm-heading, $lg-heading, $paragraph){
+
+    h1, h2 {
+        color: $lg-heading;
+    }
+
+    h3, h4 {
+        color: $sm-heading;
+    }
+
+    p, li, a {
+        color: $paragraph;
+    }
+}
+
+// Font-colors --separate
+@mixin title-color($color){
+    h1, h2, h3, h4 {
+        color: $color;
+    }
+}
+
+@mixin text-color($color){
+    li, p, a {
+        color: $color;
+    }
+}

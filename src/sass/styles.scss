@@ -4,6 +4,23 @@
 @import "../bootstrap-sass-3.3.7/assets/stylesheets/bootstrap";
 //===================================================================//
 
+//========  Helpers ========//
+
+@import 'helpers/variables';
+@import 'helpers/mixins';
+
+//========  Components =====//
+@import "components/nav";
+@import "components/carousel";
+
+//========  Layout =========//
+@import 'layout/header';
+@import "layout/section";
+
+//========  Pages =========//
+@import "pages/home";
+
+
 //@import "layout/";
 //@import "components/";
 //@import "globals/";
