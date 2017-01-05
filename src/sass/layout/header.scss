@@ -1,18 +1,20 @@
 /** APP HEADER */
 
 #app__header {
+    @include tiText__font-family--base;
 
     #app__header__logo {}
 
         .app-logo {}
 
-        .logo__text{}
+        .logo__text{
+            @include text-color($primary-color);
+            font-weight: bold;
+            font-size: $font-size-lg;
+        }
 
     #app__header__nav {
-
-        .navbar {}
-
-        .nav-tabs {}
+        @extend .nav-styles--base;
     }
 
 }

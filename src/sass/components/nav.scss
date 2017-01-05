@@ -1,0 +1,11 @@
+/** NAV styles */
+
+.nav-styles--base{
+    @include text-color($primary-color);
+
+        .navbar {}
+
+        .nav-tabs {
+
+    }
+}

@@ -5752,63 +5752,16 @@ button.close {
 /*===========================
         MIXINS
 =============================*/
-/** NAV styles */
-.nav-styles--base li, #app__header #app__header__nav li, .nav-styles--base p, #app__header #app__header__nav p, .nav-styles--base a, #app__header #app__header__nav a {
-  color: #4281A4; }
-
-/** Carousel **/
-.carousel--type1 .carousel-inner, #section__home-carousel .carousel-inner, #home-wrapper .carousel-inner {
-  height: 700px; }
-
-.carousel--type1 .item, #section__home-carousel .item, #home-wrapper .item {
-  height: 100%;
-  position: relative; }
-  .carousel--type1 .item img, #section__home-carousel .item img, #home-wrapper .item img {
-    max-width: 40%;
-    position: absolute;
-    bottom: 0px; }
-
-.carousel--type1 .item-one, #section__home-carousel .item-one, #home-wrapper .item-one {
-  background: #9CAFB7; }
-
-.carousel--type1 .item-two, #section__home-carousel .item-two, #home-wrapper .item-two {
-  background: #FE938C; }
-  .carousel--type1 .item-two img, #section__home-carousel .item-two img, #home-wrapper .item-two img {
-    max-width: 30%;
-    right: 0px;
-    bottom: 0px; }
-
-.carousel--type1 .item-three, #section__home-carousel .item-three, #home-wrapper .item-three {
-  background: #E6B89C; }
-
-.carousel--type1 .carousel-text__wrapper, #section__home-carousel .carousel-text__wrapper, #home-wrapper .carousel-text__wrapper {
-  position: absolute;
-  left: 50%;
-  top: 25%;
-  transform: translateX(-50%);
-  max-width: 380px;
-  color: #FFFFFF; }
-  .carousel--type1 .carousel-text__wrapper h1, #section__home-carousel .carousel-text__wrapper h1, #home-wrapper .carousel-text__wrapper h1, .carousel--type1 .carousel-text__wrapper h2, #section__home-carousel .carousel-text__wrapper h2, #home-wrapper .carousel-text__wrapper h2, .carousel--type1 .carousel-text__wrapper h3, #section__home-carousel .carousel-text__wrapper h3, #home-wrapper .carousel-text__wrapper h3, .carousel--type1 .carousel-text__wrapper h4, #section__home-carousel .carousel-text__wrapper h4, #home-wrapper .carousel-text__wrapper h4 {
-    font-family: "Bubblegum Sans", cursive; }
-  .carousel--type1 .carousel-text__wrapper p, #section__home-carousel .carousel-text__wrapper p, #home-wrapper .carousel-text__wrapper p, .carousel--type1 .carousel-text__wrapper li, #section__home-carousel .carousel-text__wrapper li, #home-wrapper .carousel-text__wrapper li, .carousel--type1 .carousel-text__wrapper a, #section__home-carousel .carousel-text__wrapper a, #home-wrapper .carousel-text__wrapper a {
-    font-family: "Roboto", sans-serif; }
-  .carousel--type1 .carousel-text__wrapper h1, #section__home-carousel .carousel-text__wrapper h1, #home-wrapper .carousel-text__wrapper h1 {
-    font-size: 72px; }
-
 /** APP HEADER */
-#app__header h1, #app__header h2, #app__header h3, #app__header h4 {
-  font-family: "Bubblegum Sans", cursive; }
-
-#app__header p, #app__header li, #app__header a {
-  font-family: "Roboto", sans-serif; }
-
-#app__header .logo__text {
-  font-weight: bold;
-  font-size: 24px; }
+#app__header {
+  background: pink; }
+  #app__header h1, #app__header h2, #app__header h3, #app__header h4 {
+    font-family: "Bubblegum Sans", cursive; }
+  #app__header p, #app__header li, #app__header a {
+    font-family: "Roboto", sans-serif; }
   #app__header .logo__text li, #app__header .logo__text p, #app__header .logo__text a {
-    color: #4281A4; }
-
-/** ALL PAGE SECTIONS */
-/** HOME PAGE */
+    color: #20006D; }
+  #app__header #app__header__nav li, #app__header #app__header__nav p, #app__header #app__header__nav a {
+    color: #20006D; }
 
 /*# sourceMappingURL=styles.css.map */
