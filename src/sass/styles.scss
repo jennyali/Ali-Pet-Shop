@@ -9,9 +9,13 @@
 @import 'helpers/variables';
 @import 'helpers/mixins';
 
+//========  globals =========//
+@import "globals/globals";
+
 //========  Components =====//
 @import "components/nav";
 @import "components/carousel";
+@import "components/parallex";
 
 //========  Layout =========//
 @import 'layout/header';

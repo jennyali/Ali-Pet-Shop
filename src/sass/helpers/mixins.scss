@@ -41,3 +41,10 @@
         color: $color;
     }
 }
+
+// media queries
+@mixin mediaQ--min($bp){
+    @media (min-width: $bp) {
+        @content
+    }
+}
