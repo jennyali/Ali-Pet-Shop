@@ -15,10 +15,10 @@
     <title>New App</title>
 </head>
 <body>
-    <header id="app__header" class="container">
+    <header id="app__header" class="container tiText">
         <div class="row">
             <figure id="app__header__logo" class="col-sm-4 col-sm-offset-4">
-                <img src="/assets/images/app-logo.png" class="app-logo">
+                <img src="/assets/images/app-logo-invert.png" class="app-logo icon icon--lg">
                 <figcaption class="logo__text">
                     <p class="text-center">PET STORE</p>
                 </figcaption>
@@ -56,26 +56,31 @@
         </div> 
     </header>
 
+    <main id="myApp">
+
     {{{body}}}
 
+    </main>
 
-    <footer id="app__footer" class="container">
-        <div class="row">
-            <div class="col-sm-6">
-                <p>2017 by Puurfect. Created by Ali</p>
-                <ul class="list-unstyled list-inline">
-                    <li><span class="icon-facebook"></span></li>
-                    <li><span class="icon-google-plus"></span></li>
-                    <li><span class="icon-twitter"></span></li>
-                </ul>
+    <footer id="app__footer">
+        <section class="container tiText--invert">
+            <div class="row">
+                <div class="col-sm-6">
+                    <p>2017 by Puurfect. Created by Ali</p>
+                    <ul class="list-unstyled list-inline">
+                        <li><span class="icon-facebook"></span></li>
+                        <li><span class="icon-google-plus"></span></li>
+                        <li><span class="icon-twitter"></span></li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 text-right">
+                    <p>123-456-7890 | 123-456-7890 <br />
+                        info@mysite.com <br />
+                        500 Terry Francois St, San Francisco, CA 94158
+                    </p>
+                </div>
             </div>
-            <div class="col-sm-6 text-right">
-                <p>123-456-7890 | 123-456-7890 <br />
-                    info@mysite.com <br />
-                    500 Terry Francois St, San Francisco, CA 94158
-                </p>
-            </div>
-        </div>
+        </section>
     </footer>
 
     <script src="/assets/scripts/bootstrap.js"></script>

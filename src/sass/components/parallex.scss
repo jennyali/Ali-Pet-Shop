@@ -1,8 +1,22 @@
-.parallax{
-    background-image: url('../images/largedogimage.jpeg');
+/* PARALLAX */
+
+.parallax {
     height: 500px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.parallax--about {background-image: $parallax-bg-about;}
+
+.parallax--contact {background-image: $parallax-bg-contact;}
+
+.parallax--grooming {background-image: $parallax-bg-grooming;}
+
+.parallax--petacc {background-image: $parallax-bg-petacc;}
+
+.parallax--petHotel {background-image: $parallax-bg-petHotel;}
+
+.parallax--services {background-image: $parallax-bg-services;}
+

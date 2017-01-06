@@ -29,6 +29,23 @@
     }
 }
 
+//Font sizes
+@mixin tiText__font-size($sm-heading, $lg-heading, $paragraph) {
+    
+    h1, h2 {
+        font-size: $lg-heading;
+    }
+
+    h3, h4 {
+        font-size: $sm-heading;
+    }
+
+    p, li, a {
+        font-size: $paragraph;
+    }
+}
+
+
 // Font-colors --separate
 @mixin title-color($color){
     h1, h2, h3, h4 {

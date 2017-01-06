@@ -5749,9 +5749,15 @@ button.close {
             ELEMENT VARIABLES
 
 ==============================================*/
+/* parallax images
+-----------------------*/
 /*===========================
         MIXINS
 =============================*/
+/* 
+    ** Extends **
+    - these are classes that can only be seen here
+*/
 @media (min-width: 1200px) {
   .container {
     width: 900px; } }
@@ -5760,6 +5766,61 @@ button.close {
   text-align: center;
   width: 100%;
   display: inline-block; }
+
+.tiText h1, section h1, .tiText h2, section h2, .tiText h3, section h3, .tiText h4, section h4 {
+  font-family: "Bubblegum Sans", cursive; }
+
+.tiText p, section p, .tiText li, section li, .tiText a, section a {
+  font-family: "Roboto", sans-serif; }
+
+.tiText h1, section h1, .tiText h2, section h2 {
+  color: #4281A4; }
+
+.tiText h3, section h3, .tiText h4, section h4 {
+  color: #4281A4; }
+
+.tiText p, section p, .tiText li, section li, .tiText a, section a {
+  color: #4d4d4d; }
+
+.tiText h1, section h1, .tiText h2, section h2 {
+  font-size: 42px; }
+
+.tiText h3, section h3, .tiText h4, section h4 {
+  font-size: 28px; }
+
+.tiText p, section p, .tiText li, section li, .tiText a, section a {
+  font-size: 14px; }
+
+.tiText p, section p {
+  line-height: 1.6; }
+
+.tiText--invert h1, .tiText--invert h2 {
+  color: #FFFFFF; }
+
+.tiText--invert h3, .tiText--invert h4 {
+  color: #FFFFFF; }
+
+.tiText--invert p, .tiText--invert li, .tiText--invert a {
+  color: #FFFFFF; }
+
+.tiText--invert-bg {
+  background: #4281A4; }
+
+.icon {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #4281A4;
+  width: 30%; }
+
+.icon--lg {
+  width: 80%; }
+
+#myApp .article__container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: baseline;
+  align-items: baseline; }
 
 /** NAV styles */
 .nav-styles--base li, #app__header #app__header__nav li, .nav-styles--base p, #app__header #app__header__nav p, .nav-styles--base a, #app__header #app__header__nav a {
@@ -5783,7 +5844,7 @@ button.close {
 .carousel--type1 .item-two, #section__home-carousel .item-two, #home-wrapper .item-two {
   background: #FE938C; }
   .carousel--type1 .item-two img, #section__home-carousel .item-two img, #home-wrapper .item-two img {
-    max-width: 30%;
+    max-width: 120%;
     right: 0px;
     bottom: 0px; }
 
@@ -5804,13 +5865,43 @@ button.close {
   .carousel--type1 .carousel-text__wrapper h1, #section__home-carousel .carousel-text__wrapper h1, #home-wrapper .carousel-text__wrapper h1 {
     font-size: 72px; }
 
+/* PARALLAX */
 .parallax {
-  background-image: url("../images/largedogimage.jpeg");
   height: 500px;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
+
+.parallax--about {
+  background-image: url("../images/guineapig.jpeg"); }
+
+.parallax--contact {
+  background-image: url("../images/dogincar.jpeg"); }
+
+.parallax--grooming {
+  background-image: url("../images/catgrooming.jpeg"); }
+
+.parallax--petacc {
+  background-image: url("../images/dogincup.jpeg"); }
+
+.parallax--petHotel {
+  background-image: url("../images/dogonsofa.jpeg"); }
+
+.parallax--services {
+  background-image: url("../images/largedogimage.jpeg"); }
+
+#myApp .btn-primary {
+  background: #4281A4;
+  border: none; }
+
+#myApp .btn {
+  border-radius: 0;
+  padding: 10px 30px;
+  border: none; }
+  #myApp .btn:active, #myApp .btn:focus, #myApp .btn:hover {
+    border: none;
+    box-shadow: none; }
 
 /** APP HEADER */
 #app__header h1, #app__header h2, #app__header h3, #app__header h4 {
@@ -5826,6 +5917,10 @@ button.close {
     color: #4281A4; }
 
 /** ALL PAGE SECTIONS */
+/* APP FOOTER */
+#app__footer {
+  background-color: #4281A4; }
+
 /** HOME PAGE */
 
 /*# sourceMappingURL=styles.css.map */
