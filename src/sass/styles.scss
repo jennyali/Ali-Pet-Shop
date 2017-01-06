@@ -8,6 +8,7 @@
 
 @import 'helpers/variables';
 @import 'helpers/mixins';
+@import 'helpers/extends';
 
 //========  globals =========//
 @import "globals/globals";
@@ -16,10 +17,12 @@
 @import "components/nav";
 @import "components/carousel";
 @import "components/parallex";
+@import "components/buttons";
 
 //========  Layout =========//
 @import 'layout/header';
 @import "layout/section";
+@import "layout/footer";
 
 //========  Pages =========//
 @import "pages/home";

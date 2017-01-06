@@ -1,0 +1,25 @@
+// BUTTONS
+
+//  bs-primary button
+
+#myApp {
+
+    .btn-primary {
+        background: $primary-color;
+        border: none;
+    }
+
+    .btn {
+        border-radius: 0;
+        padding: $mp-sm $mp-double;
+        border: none;
+
+        &:active,
+        &:focus,
+        &:hover { 
+            border: none;
+            box-shadow: none;
+        }
+
+    }
+}

@@ -36,6 +36,7 @@ $font-family-paragraph: 'Roboto', sans-serif;
 // BS default = 14px
 
 $font-size: (
+    xxxlg: 42px,
     xxlg: 36px,
     xlg: 28px,
     lg: 24px,
@@ -45,6 +46,7 @@ $font-size: (
     xs: 10px,
 );
 
+$font-size-xxxlg:  map-get($map: $font-size, $key: xxxlg);
 $font-size-xxlg:  map-get($map: $font-size, $key: xxlg);
 $font-size-xlg:  map-get($map: $font-size, $key: xlg);
 $font-size-lg:  map-get($map: $font-size, $key: lg);
@@ -84,3 +86,14 @@ $bp-lg: map-get($map: $breakpoints, $key: lg);
             ELEMENT VARIABLES
 
 ==============================================*/
+
+/* parallax images
+-----------------------*/
+
+$parallax-bg-about: url('../images/guineapig.jpeg');
+$parallax-bg-contact: url('../images/dogincar.jpeg');
+$parallax-bg-grooming: url('../images/catgrooming.jpeg');
+$parallax-bg-petacc: url('../images/dogincup.jpeg');
+$parallax-bg-petHotel: url('../images/dogonsofa.jpeg');
+$parallax-bg-services: url('../images/largedogimage.jpeg');
+

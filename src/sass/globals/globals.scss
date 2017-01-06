@@ -12,3 +12,64 @@
     width: 100%;
     display: inline-block;
 }
+
+// Global Text Styling
+//----------------------------------//
+
+section {
+    @extend .tiText;
+}
+
+.tiText {
+    @include tiText__font-family--base;
+    @include tiText__colors(
+        $primary-color, 
+        $primary-color, 
+        $dark);
+    @include tiText__font-size(
+        $font-size-xlg,
+        $font-size-xxxlg,
+        $font-size-base
+    );
+     
+     p{line-height: 1.6;}
+}
+
+.tiText--invert {
+    @include tiText__colors(
+        $light,
+        $light,
+        $light
+    )
+}
+
+.tiText--invert-bg {
+    background: $primary-color;
+}
+
+// Global image tag styling
+//-----------------------------------------//
+
+.icon {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    background: $primary-color;
+    width: 30%;
+}
+
+.icon--lg {
+    width: 80%;
+}
+
+// Global article inner el positioning
+//-------------------------------------------//
+
+article {
+
+}
+
+#myApp .article__container{
+    display: flex;
+    align-items: baseline;
+}
