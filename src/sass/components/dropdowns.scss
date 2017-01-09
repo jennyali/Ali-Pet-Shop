@@ -1,0 +1,41 @@
+/**  DROPDOWNS */
+
+#app__header {
+
+    .dropdown-menu {
+        padding: 0px;
+        margin: 5px 0px;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        background-color: rgba($light, 0.5);
+        
+    }
+    
+    // Default state
+    .dropdown-menu > li > a { margin: 5px 0px; }
+
+    // Hover/Focus state
+    .dropdown-menu > li > a {
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        color: $primary-color;
+        background-color: transparent;
+        transition: color 0.5s;
+    }
+    }
+
+    // Active state
+    .dropdown-menu > .active > a {
+    &,
+    &:hover,
+    &:focus {
+        color: $primary-color;
+        text-decoration: none;
+        outline: 0;
+        background-color: $dropdown-link-active-bg;
+    }
+    }
+
+}

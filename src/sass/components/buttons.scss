@@ -7,12 +7,14 @@
     .btn-primary {
         background: $primary-color;
         border: none;
+            
     }
 
     .btn {
         border-radius: 0;
         padding: $mp-sm $mp-double;
         border: none;
+            border-bottom-right-radius: 20px;
 
         &:active,
         &:focus,
