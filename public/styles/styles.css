@@ -5758,7 +5758,7 @@ button.close {
     ** Extends **
     - these are classes that can only be seen here
 */
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .container {
     width: 900px; } }
 
@@ -5816,11 +5816,71 @@ button.close {
 .icon--lg {
   width: 80%; }
 
+article img {
+  margin: 0px 0px 30px 0px; }
+
+article a {
+  margin: 10px 0px; }
+
+.article--portaits {
+  padding: 0px 30px; }
+  .article--portaits img {
+    margin: 0px;
+    width: 100%; }
+  .article--portaits figcaption {
+    padding: 15px; }
+    .article--portaits figcaption h4 {
+      margin: 0px; }
+    .article--portaits figcaption p {
+      margin: 0px; }
+
 #myApp .article__container {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: baseline;
   align-items: baseline; }
+
+.section-wrapper > section:first-child {
+  padding: 60px 0px 0px 0px; }
+
+.section-wrapper > section:last-child {
+  padding: 60px 0px 100px 0px; }
+
+.section-tiText {
+  padding: 60px 0px 60px 0px; }
+  .section-tiText > div {
+    margin: 0px 0px 45px 0px; }
+  .section-tiText h2 {
+    margin: 45px 0px 20px 0px; }
+
+.section-tiText--footer {
+  padding: 30px 0px 30px 0px; }
+  .section-tiText--footer h2 {
+    margin: 45px 0px 20px 0px; }
+  .section-tiText--footer > img {
+    margin: 0px 0px 60px 0px; }
+
+.section-tab-content .tab-pane {
+  margin: 30px 0px 45px 0px; }
+  .section-tab-content .tab-pane .row {
+    margin-bottom: 15px;
+    height: 280px; }
+    .section-tab-content .tab-pane .row div {
+      display: -ms-flexbox;
+      display: flex;
+      height: 100%;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -ms-flex-align: center;
+      align-items: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
+
+#myApp .margin--lg {
+  margin: 45px 0px 45px 0px; }
+
+#myApp .padding-col--lg {
+  padding: 0px 45px; }
 
 /** NAV styles */
 .nav-styles--base li, #app__header #app__header__nav li, .nav-styles--base p, #app__header #app__header__nav p, .nav-styles--base a, #app__header #app__header__nav a {
@@ -5902,6 +5962,9 @@ button.close {
   #myApp .btn:active, #myApp .btn:focus, #myApp .btn:hover {
     border: none;
     box-shadow: none; }
+
+#myApp .section-tiText--btn {
+  margin: 60px 0px; }
 
 /** APP HEADER */
 #app__header h1, #app__header h2, #app__header h3, #app__header h4 {
