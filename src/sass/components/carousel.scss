@@ -15,6 +15,7 @@
         .item {
             height: 100%;
             position: relative;
+            
 
             img{
                 max-width: 40%;
@@ -25,10 +26,12 @@
 
         .item-one {
             background: $secondary-color;
+            @include gradient;
         }
 
         .item-two {
             background: $contrast-color;
+            @include gradient;
                 img{
                     max-width: 120%;
                     right: 0px;
@@ -38,6 +41,7 @@
 
         .item-three {
             background: $extra-color;
+            @include gradient;
         }
     
     .carousel-text__wrapper{

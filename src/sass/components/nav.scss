@@ -1,11 +1,18 @@
 /** NAV styles */
 
-.nav-styles--base{
+#app__header__nav {
     @include text-color($primary-color);
+        margin: 0px;
+        border: none;
+        min-height: 0;
+        font-size: 14px;
 
-        .navbar {}
+        a {
+            border: none;
 
-        .nav-tabs {
-
-    }
+            &:hover {
+                color: $primary-color;
+                transition: color 0.5s;
+            }
+        }
 }
