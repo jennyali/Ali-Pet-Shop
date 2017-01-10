@@ -6023,23 +6023,45 @@ article a {
 #myApp .gallery-photo {
   padding: 0; }
 
-#myApp #gallery-lightbox {
-  display: none;
+#lightboxHome {
   position: fixed;
   width: 100%;
   height: 100%;
   bottom: 0px;
   background: rgba(0, 0, 0, 0.9);
-  z-index: 10; }
-  #myApp #gallery-lightbox img {
-    max-width: 100%; }
-  #myApp #gallery-lightbox .carousel-control {
+  z-index: 1100;
+  padding-left: 0;
+  color: #FFFFFF;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 28px; }
+  #lightboxHome img {
+    width: 100%;
+    max-width: 700px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%); }
+  #lightboxHome .lightbox__cancel-btn {
+    text-align: right;
+    height: 100px;
+    padding-right: 60px; }
+  #lightboxHome .lightbox__content-wrapper {
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -ms-flex-direction: column;
-    flex-direction: column; }
+    margin-bottom: 100px; }
+  #lightboxHome .lightbox-control {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center; }
+  #lightboxHome .lightbox-control--left {
+    text-align: right; }
+
+.lightbox--close {
+  display: none; }
 
 /** APP HEADER */
 #app__header h1, #app__header h2, #app__header h3, #app__header h4 {
