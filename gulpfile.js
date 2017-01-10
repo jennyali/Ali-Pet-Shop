@@ -15,9 +15,9 @@ gulp.task('sass', function(){
             {browsers: ['last 2 versions'],
 			cascade: false }))
         .pipe(sourcemaps.write('./'))
-        .pipe(gulp.dest(config.sass.dest))
+        .pipe(gulp.dest(config.sass.dest));
 });
 
 gulp.task('default', ['sass'], function() {
-   gulp.watch(config.sass.watch, ['sass']) 
+   gulp.watch(config.sass.watch, ['sass']); 
 });

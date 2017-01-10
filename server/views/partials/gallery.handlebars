@@ -1,0 +1,30 @@
+
+<!-- data = photos [''] -->
+
+<div class="row gallery-photo__wrapper">
+     {{#each photos}}
+        <div class="col-sm-2 gallery-photo">
+            <img class="img-responsive" src="/assets/images/{{this}}">
+        </div>
+     {{/each}}   
+</div>
+
+<!-- lightbox -->
+
+<section class="row lightbox">
+    <div id="gallery-lightbox" class="carousel">
+        <div class="carousel-inner row" role="listbox">
+                <div class="item active col-sm-6 col-sm-offset-3">
+                    <img class="img-responsive" src="/assets/images/catgrooming.jpeg">
+                </div>
+        </div>
+        <a class="left carousel-control" href="#gallery-lightbox" role="button" data-slide="prev">
+            <span class="icon-arrow-39" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#gallery-lightbox" role="button" data-slide="next">
+            <span class="icon-arrow-40" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</section>

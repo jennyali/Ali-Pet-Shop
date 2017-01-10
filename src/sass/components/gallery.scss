@@ -1,0 +1,14 @@
+//** Photo gallery imgs *//
+
+#myApp {
+
+    .gallery-photo__wrapper{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .gallery-photo{
+        padding: 0;
+    }
+
+}
