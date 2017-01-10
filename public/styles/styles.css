@@ -6014,6 +6014,33 @@ article a {
   outline: 0;
   background-color: #337ab7; }
 
+#myApp .gallery-photo__wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+#myApp .gallery-photo {
+  padding: 0; }
+
+#myApp #gallery-lightbox {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  bottom: 0px;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 10; }
+  #myApp #gallery-lightbox img {
+    max-width: 100%; }
+  #myApp #gallery-lightbox .carousel-control {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+
 /** APP HEADER */
 #app__header h1, #app__header h2, #app__header h3, #app__header h4 {
   font-family: "Bubblegum Sans", cursive; }

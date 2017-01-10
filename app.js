@@ -22,7 +22,11 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use('/assets', express.static(__dirname + '/public'));
 app.set('views', './server/views');
-app.engine('handlebars', exphbs({layoutsDir: './server/views/layouts' , defaultLayout: 'main'}));
+app.engine('handlebars', exphbs({
+    layoutsDir: './server/views/layouts' ,
+    partialsDir: './server/views/partials', 
+    defaultLayout: 'main'})
+);
 app.set('view engine', 'handlebars');
 app.use(morgan('dev'));
 
