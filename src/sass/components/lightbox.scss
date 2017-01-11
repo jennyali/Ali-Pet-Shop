@@ -1,5 +1,5 @@
 #lightboxHome {
-    //display: none;
+    display: none;
     position: fixed;
     width: 100%;
     height: 100%;
@@ -25,7 +25,14 @@
         .lightbox__cancel-btn {
             text-align: right;
             height: 100px;
-            padding-right: $mp-triple;           
+            padding-right: $mp-triple;
+            cursor: pointer; 
+            opacity: 0.5;
+            transition: 0.5s;
+
+                &:hover {
+                    opacity: 1;
+                }            
         }
 
         .lightbox__content-wrapper {
@@ -35,6 +42,13 @@
 
         .lightbox-control {
             align-self: center;
+            cursor: pointer;
+            opacity: 0.5;
+            transition: 0.5s;
+
+                &:hover {
+                    opacity: 1;
+                }   
         }
         
         .lightbox-control--left {
