@@ -6021,9 +6021,14 @@ article a {
   flex-wrap: wrap; }
 
 #myApp .gallery-photo {
-  padding: 0; }
+  padding: 0;
+  transition: opacity 0.5s;
+  cursor: pointer; }
+  #myApp .gallery-photo:hover {
+    opacity: 0.6; }
 
 #lightboxHome {
+  display: none;
   position: fixed;
   width: 100%;
   height: 100%;
@@ -6048,7 +6053,12 @@ article a {
   #lightboxHome .lightbox__cancel-btn {
     text-align: right;
     height: 100px;
-    padding-right: 60px; }
+    padding-right: 60px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.5s; }
+    #lightboxHome .lightbox__cancel-btn:hover {
+      opacity: 1; }
   #lightboxHome .lightbox__content-wrapper {
     display: -ms-flexbox;
     display: flex;
@@ -6056,7 +6066,12 @@ article a {
   #lightboxHome .lightbox-control {
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;
-    align-self: center; }
+    align-self: center;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.5s; }
+    #lightboxHome .lightbox-control:hover {
+      opacity: 1; }
   #lightboxHome .lightbox-control--left {
     text-align: right; }
 
