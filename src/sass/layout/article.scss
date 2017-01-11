@@ -1,0 +1,31 @@
+
+// articles color in when hovered over
+#homeArticles, #servicesArticles {
+
+    article:nth-child(1) {
+        &:hover {  
+
+            .btn-primary, img {@include colorMe(null, $secondary-color)}
+
+            h4 {@include colorMe($secondary-color)}
+        }
+    }
+
+    article:nth-child(2) {
+        &:hover {
+
+            .btn-primary, img {@include colorMe(null, $contrast-color)}
+
+            h4 {@include colorMe($contrast-color)}
+        }
+    }
+
+    article:nth-child(3) {
+        &:hover {
+
+            .btn-primary, img {@include colorMe(null, $extra-color)}
+
+            h4{@include colorMe($extra-color)}
+        }
+    }
+}

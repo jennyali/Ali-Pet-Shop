@@ -1,13 +1,7 @@
 /** Carousel **/
 
-.carousel--type1 {
-    .carousel-slide {}
+#section__home-carousel {
 
-        .carousel-indicators {
-
-            li{}
-        }
-    
     .carousel-inner {
         height: 700px;
     }
@@ -16,6 +10,8 @@
             height: 100%;
             position: relative;
             
+            
+            
 
             img{
                 max-width: 40%;
@@ -23,6 +19,7 @@
                 bottom: 0px;
             }
         }
+
 
         .item-one {
             background: $secondary-color;
@@ -43,7 +40,8 @@
             background: $extra-color;
             @include gradient;
         }
-    
+
+
     .carousel-text__wrapper{
         @include tiText__font-family--base;
         position: absolute;
@@ -56,9 +54,41 @@
         h1{
             font-size: 72px;
         }
-
-        p{}
     }
+
+    //==== FADE CAROUSEL CODE ====//
+
+.carousel-fade {
+    .carousel-inner {
+        .item {
+            transition-property: opacity;
+        }
+        
+        .item,
+        .active.left,
+        .active.right {
+            opacity: 0.5;
+        }
+
+        .active,
+        .next.left,
+        .prev.right {
+            opacity: 1;
+        }
+
+        .next,
+        .prev,
+        .active.left,
+        .active.right {
+            left: 0;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    .carousel-control {
+        z-index: 2;
+    }
+}
 
 }
 

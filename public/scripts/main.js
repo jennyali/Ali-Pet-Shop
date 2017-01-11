@@ -35,6 +35,9 @@ var $lightboxCtrlLeft = $('.lightbox-control--left');
 var $lightboxCtrlRight = $('.lightbox-control--right');
 var $lightboxImg = $('.lightbox-img img');
 
+//homepage articles
+var $homeArticles = $('#homeArticles article');
+
 //--------VARIABLES ----------//
 var open = false;
 var indexNumber = 0;
@@ -43,6 +46,8 @@ var indexNumber = 0;
 
 
 //------- EVENTS ----------//
+
+
 $galleryPhoto.on({
     'click': function() {
         var name = $(this).attr('src');
@@ -88,9 +93,9 @@ $lightboxCtrlRight.on({
 //lightbox CONTROLLER
 function lightboxController(open, src, id){
     if(open){
-        $lightboxHome.show();
+        $lightboxHome.removeClass('display--none');
     } else {
-        $lightboxHome.hide();
+        $lightboxHome.addClass('display--none');
     }
 
     lightboxImgUpdate(src, id);
@@ -101,7 +106,6 @@ function lightboxBtnController(id, boolean){
     var incrementNumber = boolean;
     var arrayLength = photosArray.length;
     var currentIndexNumber = 0;
-    
 
     _.each(photosArray, function(photo, index){ // finds matching data-id and increments index number
         var foundItemId = $(photo).attr('data-id');
@@ -112,24 +116,22 @@ function lightboxBtnController(id, boolean){
             }
     });
 
-    //console.log(currentIndexNumber);
-
-    if(boolean === true) {
+    if (boolean === true) {
         indexNumber = (currentIndexNumber + 1);
-        //console.log(indexNumber);
 
-        if(indexNumber == 12){
+        if (indexNumber === arrayLength) {
             indexNumber = 0;
+
         }
                     
-    } else {
+    } else if (indexNumber === 0 && boolean === false) {
+        indexNumber = (arrayLength - 1);
+
+
+    } else if (indexNumber > 0 && boolean === false) {
         indexNumber = (currentIndexNumber - 1);
-
-        //if(indexNumber == 0){
-            //indexNumber = 11;
-        //}
+        
     }
-
 
     var foundPhoto = photosArray[indexNumber];
     var foundPhotoId = $(foundPhoto).attr('data-id');
@@ -145,9 +147,8 @@ function lightboxImgUpdate(src, id){
 }
 
 
+
 //------- FUNCTION CALLS ----------//
 $('#calendar').fullCalendar();
-lightboxController(open);
-
-
+$('.carousel').carousel();
 });
