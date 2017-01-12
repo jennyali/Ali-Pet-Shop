@@ -37,6 +37,8 @@ section {
     );
      
      p{line-height: 1.6;}
+
+            @include mediaQ--max($bp-sm){}
 }
 
 .tiText--invert {
@@ -95,8 +97,11 @@ article {
 
 
 #myApp .article__container{
-    display: flex;
     align-items: baseline;
+
+        @include mediaQ--min($bp-sm){
+            display: flex;
+        }
 }
 
 // Global section inner el margin & padding
@@ -112,9 +117,17 @@ article {
 .section-tiText {
     padding: 60px 0px 60px 0px;
 
-    & > div { margin: 0px 0px 45px 0px;}
+        @include mediaQ--max($bp-sm){
+            padding: 0px 15px;
+        }
+
+    & > div { 
+        margin: 0px 0px 45px 0px;
+    }
 
     h2 { margin: 45px 0px 20px 0px;}
+
+
 
 }
 

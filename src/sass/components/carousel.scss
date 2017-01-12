@@ -4,6 +4,10 @@
 
     .carousel-inner {
         height: 700px;
+
+            @include mediaQ--max($bp-sm){
+                height: 30rem;
+            }
     }
 
         .item {
@@ -23,12 +27,18 @@
 
         .item-one {
             background: $secondary-color;
-            @include gradient;
+        
+                @include mediaQ--min($bp-sm){
+                    @include gradient;
+                }
         }
 
         .item-two {
             background: $contrast-color;
-            @include gradient;
+                @include mediaQ--min($bp-sm){
+                    @include gradient;
+                }
+
                 img{
                     max-width: 120%;
                     right: 0px;
@@ -38,7 +48,9 @@
 
         .item-three {
             background: $extra-color;
-            @include gradient;
+                @include mediaQ--min($bp-sm){
+                    @include gradient;
+                }
         }
 
 
@@ -51,8 +63,16 @@
         max-width: 380px;
         color: $light;
 
+            @include mediaQ--max($bp-sm){
+                top: 5%;
+            }
+
         h1{
             font-size: 72px;
+
+             @include mediaQ--max($bp-sm){
+                 font-size: 42px;
+             }
         }
     }
 

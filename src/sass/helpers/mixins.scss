@@ -70,6 +70,12 @@
     }
 };
 
+@mixin mediaQ--max($bp){
+    @media (max-width: $bp) {
+        @content
+    }
+};
+
 // caroursel gradient 
 
 @mixin gradient {
