@@ -5783,10 +5783,10 @@ body {
   color: #493D6D; }
 
 .tiText p, section p, .tiText li, section li {
-  color: #4d4d4d; }
+  color: #666666; }
 
 .tiText a, section a {
-  color: #4d4d4d; }
+  color: #666666; }
 
 .tiText h1, section h1, .tiText h2, section h2 {
   font-size: 42px; }
@@ -5810,7 +5810,7 @@ body {
   color: #FFFFFF; }
 
 .tiText--invert a {
-  color: #4d4d4d; }
+  color: #666666; }
 
 .tiText--invert-bg {
   background: #493D6D; }
@@ -5888,6 +5888,10 @@ article a {
 
 #myApp .padding-col--lg {
   padding: 0px 45px; }
+
+.highlightText {
+  color: #493D6D;
+  font-weight: bold; }
 
 .display--none {
   display: none; }
@@ -5997,17 +6001,21 @@ article a {
 .parallax--services {
   background-image: url("../images/largedogimage.jpeg"); }
 
+#myApp .btn {
+  border-radius: 0;
+  padding: 10px 30px;
+  border: none;
+  font-family: "Roboto", sans-serif; }
+  #myApp .btn:active, #myApp .btn:focus, #myApp .btn:hover {
+    border: none;
+    box-shadow: none; }
+
 #myApp .btn-primary {
   background: #493D6D;
   border: none; }
 
-#myApp .btn {
-  border-radius: 0;
-  padding: 10px 30px;
-  border: none; }
-  #myApp .btn:active, #myApp .btn:focus, #myApp .btn:hover {
-    border: none;
-    box-shadow: none; }
+#myApp .btn-primary--small {
+  padding: 10px; }
 
 #myApp .section-tiText--btn {
   margin: 60px 0px; }
@@ -6100,6 +6108,29 @@ article a {
 
 #lightboxHome .lightbox-control--left {
   text-align: right; }
+
+form .form-group {
+  margin: 0; }
+
+form .form-control {
+  border-radius: 0;
+  border: 1px solid #666666;
+  margin: 5px 0px;
+  font-family: "Roboto", sans-serif; }
+  form .form-control:focus {
+    border-color: #493D6D;
+    outline: 0;
+    box-shadow: none; }
+
+form .form-control--lg-height {
+  height: 140px; }
+
+.alert-success {
+  text-align: left;
+  background-color: #cfc9e1;
+  color: #493D6D;
+  font-family: "Roboto", sans-serif;
+  border-color: #9487bc; }
 
 /** APP HEADER */
 #app__header h1, #app__header h2, #app__header h3, #app__header h4 {

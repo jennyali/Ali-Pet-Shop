@@ -1,0 +1,32 @@
+
+form {
+
+    .form-group {
+        margin: 0;
+    }
+
+    .form-control {
+        border-radius: 0;
+        border: 1px solid $dark;
+        margin: 5px 0px;
+        font-family: $font-family-paragraph;
+
+        &:focus {
+            border-color: $primary-color;
+            outline: 0;
+            box-shadow: none;
+        }
+    }
+
+    .form-control--lg-height {
+        height: 140px;
+    }
+}
+
+.alert-success {
+    text-align: left;
+    background-color: lighten($primary-color, 50%);
+    color: $primary-color;
+    font-family: $font-family-paragraph;
+    border-color: lighten($primary-color, 30%);
+}

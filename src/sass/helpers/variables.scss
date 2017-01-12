@@ -11,7 +11,7 @@ $colors : (
     contrast: #1B998B,
     extra: #FF9B71,
     light: #FFFFFF,
-    dark: lighten(#000000, 30%),
+    dark: lighten(#000000, 40%),
 );
 
 $primary-color: map-get($map: $colors, $key: primary);

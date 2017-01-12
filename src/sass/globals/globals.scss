@@ -153,9 +153,17 @@ article {
 
 #myApp .padding-col--lg { padding: 0px 45px; }
 
+//color text span
+
+.highlightText {
+    color: $primary-color;
+    font-weight: bold;
+}
+
+
+
 // jQuery addclasses
-
-
+//============================================
 //hidden / visiable 
 
 .display--none {

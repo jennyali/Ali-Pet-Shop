@@ -6,17 +6,49 @@
     <section class="container text-center section-tiText">
         <div class="row">
             <h2>Get in Touch</h2>
-            <p>Tel: 123-456-7890 • Email: info@mysite.com • Address: 500 Terry Francois St, San Francisco, CA 94158</p>
+            <p>
+                <span class="highlightText">Tel:</span> 123-456-7890 • 
+                <span class="highlightText">Email:</span> info@mysite.com • 
+                <span class="highlightText">Address:</span> 500 Terry Francois St, San Francisco, CA 94158
+            </p>
         </div>
         <div class="row">
-            <form class="form-group col-sm-8 col-sm-offset-2">
-                <input class="form-control" type="text" placeholder="Name">
-                <input class="form-control" type="email" placeholder="Email">
-                <input class="form-control" type="text" placeholder="Subject">
-                <textarea class="form-control" type="text" placeholder="Message"></textarea>
-                <button class="btn btn-primary pull-right">SEND</button>
+            <form class="form-group col-sm-8 col-sm-offset-2" method="POST" action="">
+                <div class="form-group {{#if name }}has-error{{/if}}">
+                    <input class="form-control" type="text" placeholder="Name" name="name" aria-describedby="nameError">
+                    {{#if name}}
+                        <span id="nameError" class="help-block pull-left">* A block of help text that breaks onto a new line and may extend beyond one line.</span>
+                    {{/if}}
+                </div>
+                <div class="form-group {{#if email }}has-error{{/if}}">
+                    <input class="form-control" type="email" placeholder="Email" name="email" aria-describedby="emailError">
+                    {{#if email}}
+                        <span id="emailError" class="help-block pull-left">* A block of help text that breaks onto a new line and may extend beyond one line.</span>
+                    {{/if}}
+                </div>
+                <div class="form-group {{#if password }}has-error{{/if}}">
+                    <input class="form-control" type="text" placeholder="Subject" name="password" aria-describedby="passwordError">
+                    {{#if password}}
+                        <span id="passwordError" class="help-block pull-left">* A block of help text that breaks onto a new line and may extend beyond one line.</span>
+                    {{/if}}
+                </div>
+                <div class="form-group {{#if message }}has-error{{/if}}">
+                    <textarea class="form-control form-control--lg-height" type="text" placeholder="Message" name="message" aria-describedby="messageError"></textarea>
+                    {{#if message}}
+                        <span id="messageError" class="help-block pull-left">* A block of help text that breaks onto a new line and may extend beyond one line.</span>
+                    {{/if}}
+                </div>
+                <input class="btn btn-primary btn-primary--small pull-right" type="submit" value="SEND">
             </form>
         </div>
+        {{#if success}}
+            <div class="row">
+                <div class="alert alert-success">
+                    <strong>Success!</strong> form has been sent.
+                    <a href="#" class="close icon-delete-2" data-dismiss="alert" aria-label="close"></a>
+                </div>
+            </div>
+        {{/if}}
     </section>
 
     <section class="container section-tiText">
