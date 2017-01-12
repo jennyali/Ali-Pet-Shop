@@ -5845,16 +5845,21 @@ article a {
       margin: 0px; }
 
 #myApp .article__container {
-  display: -ms-flexbox;
-  display: flex;
   -ms-flex-align: baseline;
   align-items: baseline; }
+  @media (min-width: 768px) {
+    #myApp .article__container {
+      display: -ms-flexbox;
+      display: flex; } }
 
 .section-wrapper > section:last-child {
   padding: 60px 0px 100px 0px; }
 
 .section-tiText {
   padding: 60px 0px 60px 0px; }
+  @media (max-width: 768px) {
+    .section-tiText {
+      padding: 0px 15px; } }
   .section-tiText > div {
     margin: 0px 0px 45px 0px; }
   .section-tiText h2 {
@@ -5913,6 +5918,9 @@ article a {
 /** Carousel **/
 #section__home-carousel .carousel-inner {
   height: 700px; }
+  @media (max-width: 768px) {
+    #section__home-carousel .carousel-inner {
+      height: 30rem; } }
 
 #section__home-carousel .item {
   height: 100%;
@@ -5923,20 +5931,26 @@ article a {
     bottom: 0px; }
 
 #section__home-carousel .item-one {
-  background: #E84855;
-  box-shadow: inset 9px -200px 218px -51px white; }
+  background: #E84855; }
+  @media (min-width: 768px) {
+    #section__home-carousel .item-one {
+      box-shadow: inset 9px -200px 218px -51px white; } }
 
 #section__home-carousel .item-two {
-  background: #1B998B;
-  box-shadow: inset 9px -200px 218px -51px white; }
+  background: #1B998B; }
+  @media (min-width: 768px) {
+    #section__home-carousel .item-two {
+      box-shadow: inset 9px -200px 218px -51px white; } }
   #section__home-carousel .item-two img {
     max-width: 120%;
     right: 0px;
     bottom: 0px; }
 
 #section__home-carousel .item-three {
-  background: #FF9B71;
-  box-shadow: inset 9px -200px 218px -51px white; }
+  background: #FF9B71; }
+  @media (min-width: 768px) {
+    #section__home-carousel .item-three {
+      box-shadow: inset 9px -200px 218px -51px white; } }
 
 #section__home-carousel .carousel-text__wrapper {
   position: absolute;
@@ -5949,8 +5963,14 @@ article a {
     font-family: "Bubblegum Sans", cursive; }
   #section__home-carousel .carousel-text__wrapper p, #section__home-carousel .carousel-text__wrapper li, #section__home-carousel .carousel-text__wrapper a {
     font-family: "Roboto", sans-serif; }
+  @media (max-width: 768px) {
+    #section__home-carousel .carousel-text__wrapper {
+      top: 5%; } }
   #section__home-carousel .carousel-text__wrapper h1 {
     font-size: 72px; }
+    @media (max-width: 768px) {
+      #section__home-carousel .carousel-text__wrapper h1 {
+        font-size: 42px; } }
 
 #section__home-carousel .carousel-fade .carousel-inner .item {
   transition-property: opacity; }
@@ -6138,6 +6158,9 @@ form .form-control--lg-height {
 
 #app__header p, #app__header li, #app__header a {
   font-family: "Roboto", sans-serif; }
+
+#app__header .app-logo {
+  max-width: 180px; }
 
 #app__header .logo__text {
   font-weight: bold;

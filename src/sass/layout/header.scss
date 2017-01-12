@@ -5,7 +5,9 @@
 
     #app__header__logo {}
 
-        .app-logo {}
+        .app-logo {
+            max-width: 180px;
+        }
 
         .logo__text{
             @include text-color($primary-color);
