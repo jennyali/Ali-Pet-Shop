@@ -5,6 +5,7 @@ var controller = require('../controllers/contactController');
 
 router
     .route('/')
-    .get(controller);
+    .get(controller.renderPage)
+    .post(controller.sendToDb);
 
 module.exports = router;

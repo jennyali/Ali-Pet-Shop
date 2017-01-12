@@ -4,17 +4,11 @@
 
 #myApp {
 
-    .btn-primary {
-        background: $primary-color;
-        border: none;
-            
-    }
-
     .btn {
         border-radius: 0;
         padding: $mp-sm $mp-double;
         border: none;
-           // border-bottom-right-radius: 20px;
+        font-family: $font-family-paragraph;  
 
         &:active,
         &:focus,
@@ -23,6 +17,17 @@
             box-shadow: none;
         }
 
+    }
+
+    .btn-primary {
+        background: $primary-color;
+        border: none;
+            
+    }
+
+
+    .btn-primary--small {
+        padding: $mp-sm;
     }
 
     .section-tiText--btn {
