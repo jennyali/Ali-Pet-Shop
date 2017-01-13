@@ -5901,19 +5901,53 @@ article a {
 .display--none {
   display: none; }
 
+#app__header .display--none {
+  display: none; }
+
 /** NAV styles */
 #app__header__nav {
   margin: 0px;
   border: none;
   min-height: 0;
   font-size: 14px; }
-  #app__header__nav li, #app__header__nav p {
+  #app__header__nav li, #app__header__nav p, #app__header__nav a {
     color: #493D6D; }
   #app__header__nav a {
     border: none; }
     #app__header__nav a:hover {
       color: #493D6D;
       transition: color 0.5s; }
+
+.sm-screen-nav {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #493D6D;
+  z-index: 30;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.25s; }
+  .sm-screen-nav li {
+    padding: 15px 0;
+    color: #FFFFFF;
+    letter-spacing: 1px; }
+    .sm-screen-nav li a {
+      color: #FFFFFF;
+      padding: 0 10px; }
+  .sm-screen-nav .li-with-collapse, .sm-screen-nav .list-title {
+    border-bottom: 1px solid #FFFFFF; }
+  .sm-screen-nav .active li, .sm-screen-nav .active p, .sm-screen-nav .active a {
+    color: #FF9B71; }
 
 /** Carousel **/
 #section__home-carousel .carousel-inner {
@@ -6042,8 +6076,8 @@ article a {
 
 /**  DROPDOWNS */
 #app__header .dropdown-menu {
+  display: none;
   padding: 0px;
-  margin: 5px 0px;
   border: none;
   border-radius: 0;
   box-shadow: none;
@@ -6063,6 +6097,13 @@ article a {
   text-decoration: none;
   outline: 0;
   background-color: #337ab7; }
+
+.burger-menu__wrapper {
+  display: inline-block;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 28px; }
 
 #myApp .gallery-photo__wrapper {
   display: -ms-flexbox;
@@ -6152,6 +6193,18 @@ form .form-control--lg-height {
   font-family: "Roboto", sans-serif;
   border-color: #9487bc; }
 
+/** ICONS */
+.icon-bars {
+  color: #493D6D; }
+
+.icon-delete-1 {
+  font-size: 24px; }
+
+.cancel-menu-btn {
+  position: relative;
+  z-index: 35;
+  color: white; }
+
 /** APP HEADER */
 #app__header h1, #app__header h2, #app__header h3, #app__header h4 {
   font-family: "Bubblegum Sans", cursive; }
@@ -6160,12 +6213,13 @@ form .form-control--lg-height {
   font-family: "Roboto", sans-serif; }
 
 #app__header .app-logo {
-  max-width: 180px; }
+  max-width: 180px;
+  margin: 15px 0; }
 
 #app__header .logo__text {
   font-weight: bold;
   font-size: 24px; }
-  #app__header .logo__text li, #app__header .logo__text p {
+  #app__header .logo__text li, #app__header .logo__text p, #app__header .logo__text a {
     color: #493D6D; }
 
 /** ALL PAGE SECTIONS */

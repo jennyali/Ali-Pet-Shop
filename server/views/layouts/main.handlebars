@@ -23,23 +23,47 @@
                     <p class="text-center">PET STORE</p>
                 </figcaption>
             </figure>
-            <div class="visible-xs">
+            <div class="burger-menu__wrapper">
                 <span class="icon-bars">
-                    <!-- dropdown for mobile screen -->
+                    <!-- burger-menu to fixed full screen nav -->
                 </span>
+                <div class="sm-screen-nav display--none display--fade">
+                    <nav class="row">
+                        <ul class="list-unstyled">
+                            <li class="active list-title"><a href="/">Home</a></li>
+                            <li class="li-with-collapse">
+                                <span class="icon-add-1" data-toggle="collapse" data-target="#about-dropdown-sm-screen"></span>
+                                <a href="/about">About Us</a>
+                                <ul id="about-dropdown-sm-screen" class="collapse list-unstyled">
+                                    <li><a href="#">Our Staff</a></li>
+                                </ul>
+                            </li>
+                            <li class="li-with-collapse">
+                                <span class="icon-add-1" data-toggle="collapse" data-target="#services-dropdown-sm-screen"></span>
+                                <a href="/services">Our Services</a>
+                                <ul id="services-dropdown-sm-screen" class="collapse list-unstyled">
+                                    <li><a href="/services/grooming">Grooming</a></li>
+                                    <li><a href="/services/petaccess">Pet accessories</a></li>
+                                    <li><a href="/services/pethotel">Pet Hotel</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </div>
         <div class="row hidden-xs">
             <nav id="app__header__nav" class="navbar navbar-default">
                 <ul class="nav nav-tabs nav-justified">
                     <li><a href="/">Home</a></li>
-                    <li class="dropdown">
+                    <li class="dropdown" id="dropdown-inline-about">
                         <a href="/about">About Us</a>
                         <ul class="dropdown-menu">
                             <li><a href="#">Our Staff</a><li>
                         </ul>
                     </li>
-                    <li>
+                    <li id="dropdown-inline-services">
                         <a href="/services">Our Services</a>
                         <ul class="dropdown-menu">
                             <li><a href="/services/grooming">Grooming</a><li>
