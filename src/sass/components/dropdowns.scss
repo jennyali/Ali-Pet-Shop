@@ -3,8 +3,9 @@
 #app__header {
 
     .dropdown-menu {
+        display: none;
         padding: 0px;
-        margin: 5px 0px;
+        //margin: 5px 0px;
         border: none;
         border-radius: 0;
         box-shadow: none;
@@ -38,4 +39,15 @@
     }
     }
 
+
+}
+
+//* Burger menu */
+
+.burger-menu__wrapper {
+    display: inline-block;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: $font-size-xlg;
 }

@@ -16,3 +16,37 @@
             }
         }
 }
+
+.sm-screen-nav {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: $primary-color;
+    z-index: 30;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+    
+        li {
+             padding: $mp-default 0;
+             color: $light;
+             letter-spacing: 1px;
+
+                a {
+                    color: $light;
+                    padding: 0 $mp-sm;
+                }
+        }
+
+        .li-with-collapse, .list-title { border-bottom: 1px solid $light }
+
+        .active { @include text-color($extra-color) }
+
+}
+

@@ -58,7 +58,7 @@
 }
 
 @mixin text-color($color){
-    li, p {
+    li, p, a {
         color: $color;
     }
 }

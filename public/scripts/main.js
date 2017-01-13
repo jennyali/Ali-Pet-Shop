@@ -38,6 +38,16 @@ var $lightboxImg = $('.lightbox-img img');
 //homepage articles
 var $homeArticles = $('#homeArticles article');
 
+//sm-screen menu-nav
+var $smScreenNav = $('.sm-screen-nav');
+var $burgerMenu = $('.burger-menu__wrapper > span');
+
+//inline nav 
+$dropdownAbout = $('#dropdown-inline-about');
+$dropdownAboutList = $('#dropdown-inline-about ul');
+$dropdownServices = $('#dropdown-inline-services');
+$dropdownServicesList = $('#dropdown-inline-services ul');
+
 //--------VARIABLES ----------//
 var open = false;
 var indexNumber = 0;
@@ -47,36 +57,35 @@ var indexNumber = 0;
 
 //------- EVENTS ----------//
 
+$burgerMenu.on({
+    'click' : function() {
+        burgerMenuController(this);
+    }
+});
 
 $galleryPhoto.on({
     'click': function() {
-        var name = $(this).attr('src');
-        var id = $(this).attr('data-id');
-        open = true;
-        lightboxController(open, name, id);
+        lightboxController(this);
     }
 });
 
 $lightboxCancelBtn.on({
     'click' : function() {
-        open = false;
-        lightboxController(open);
+        lightboxController(this);
     }
 });
 
 $lightboxCtrlLeft.on({
     'click': function() {
-        var id = $lightboxImg.attr('data-id');
         var addToNumber = false;
-        lightboxBtnController(id, addToNumber);
+        lightboxBtnController(addToNumber);
     }
 });
 
 $lightboxCtrlRight.on({
     'click': function() {
-        var id = $lightboxImg.attr('data-id');
         var addToNumber = true;
-        lightboxBtnController(id, addToNumber);
+        lightboxBtnController(addToNumber);
 
     }
 });
@@ -90,19 +99,70 @@ $lightboxCtrlRight.on({
 
 //------- FUNCTIONS ----------//
 
+//dropdown menus
+function dropdownAppear(listitem, dropdown) {
+    $(listitem).on({
+        'mouseenter': function() {
+            $(dropdown).fadeIn();
+        },
+
+        'mouseleave': function() {
+            $(dropdown).fadeOut();
+        }
+    });
+}
+
+
+//burger-menu CONTROLLER header
+function burgerMenuController(that) {
+    var className = $(that).attr('class');
+
+    if(className === 'icon-bars') {
+
+        $(that).addClass('icon-delete-1')
+               .addClass('cancel-menu-btn');
+
+        $smScreenNav.removeClass('display--none');
+
+        $smScreenNav.animate({
+            opacity: 1
+        });
+
+        $(that).removeClass('icon-bars');
+
+
+    } else if (className === 'icon-delete-1 cancel-menu-btn') {
+        $smScreenNav.animate({
+            opacity: 0
+        }, 'slow', function(){
+           return $smScreenNav.addClass('display--none');
+        });
+
+        $(that).addClass('icon-bars')
+                .removeClass('icon-delete-1')
+                .removeClass('cancel-menu-btn');
+
+    } else {
+        console.log('ERROR incorrect class name');
+    }
+}
+
 //lightbox CONTROLLER
-function lightboxController(open, src, id){
-    if(open){
+function lightboxController(that) {
+    var open = $(that).attr('data-open');
+    
+    if(open === "true"){
         $lightboxHome.removeClass('display--none');
     } else {
         $lightboxHome.addClass('display--none');
     }
 
-    lightboxImgUpdate(src, id);
+    lightboxImgUpdate(that);
 }
 
 //lightbox btn CONTROLLER
-function lightboxBtnController(id, boolean){
+function lightboxBtnController(boolean){
+    var id = $lightboxImg.attr('data-id');
     var incrementNumber = boolean;
     var arrayLength = photosArray.length;
     var currentIndexNumber = 0;
@@ -137,18 +197,23 @@ function lightboxBtnController(id, boolean){
     var foundPhotoId = $(foundPhoto).attr('data-id');
     var foundPhotoSrc = $(foundPhoto).attr('src');
 
-    lightboxImgUpdate(foundPhotoSrc, foundPhotoId);  
+    lightboxImgUpdate(foundPhoto);  
 }
 
 // lightbox img UPDATE 
-function lightboxImgUpdate(src, id){
+
+function lightboxImgUpdate(that){
+    var src = $(that).attr('src');
+    var id = $(that).attr('data-id');
+
     $lightboxImg.attr('src' , src);
     $lightboxImg.attr('data-id', id);
 }
 
 
-
 //------- FUNCTION CALLS ----------//
 $('#calendar').fullCalendar();
 $('.carousel').carousel();
+dropdownAppear($dropdownAbout, $dropdownAboutList);
+dropdownAppear($dropdownServices, $dropdownServicesList);
 });
