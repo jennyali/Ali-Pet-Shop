@@ -2,7 +2,21 @@
 // articles color in when hovered over
 #homeArticles, #servicesArticles {
 
-    article:nth-child(1) {
+    article {
+        @include mediaQ--max($bp-sm){
+            margin-bottom: 60px;
+        }
+        
+        &:hover {  
+
+            .btn-primary, img {@include colorMe(null, lighten($primary-color, 10%))}
+
+            h4 {@include colorMe(lighten($primary-color, 10%))}
+        }
+
+    }
+
+   /* article:nth-child(1) {
         &:hover {  
 
             .btn-primary, img {@include colorMe(null, $secondary-color)}
@@ -27,5 +41,5 @@
 
             h4{@include colorMe($extra-color)}
         }
-    }
+    }*/
 }

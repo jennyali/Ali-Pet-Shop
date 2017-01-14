@@ -52,7 +52,11 @@
 
                 &:hover {
                     opacity: 1;
-                }   
+                }
+
+                @include mediaQ--max($bp-sm){
+                    display: none;
+                }
         }
         
         .lightbox-control--left {
