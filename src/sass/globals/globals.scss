@@ -84,13 +84,17 @@ article {
 .article--portaits {
     padding: 0px 30px;
 
+    @include mediaQ--max($bp-sm) {
+        margin-bottom: $mp-double;
+    }
+
     img {
         margin: 0px;
         width: 100%;
     }
 
     figcaption {
-            border-bottom-right-radius: 20px;
+            //border-bottom-right-radius: 20px;
         padding: 15px;
 
         h4{ margin: 0px;}
@@ -102,9 +106,13 @@ article {
 
 #myApp .article__container{
     align-items: baseline;
+    display: flex;
 
-        @include mediaQ--min($bp-sm){
+        @include mediaQ--max($bp-sm) {
             display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 }
 
@@ -113,44 +121,50 @@ article {
 
 .section-wrapper {
 
-   // & > section:first-child { padding: 60px 0px 0px 0px;}
+    @include mediaQ--max($bp-sm) {
+        section {
+            margin-bottom: 60px;
+        }
 
-     & > section:last-child { padding: 60px 0px 100px 0px;}
+        section:first-child, section:last-child {
+            margin-bottom: 0px;
+        }
+    }
 }
 
 .section-tiText {
-    padding: 60px 0px 60px 0px;
+    //padding: 60px 0px 60px 0px;
 
-        @include mediaQ--max($bp-sm){
-            padding: 0px $mp-lg;
+        @include mediaQ--max($bp-md){
+            padding: 0px $mp-double;
         }
 
-    & > div { 
-        margin: 0px 0px 45px 0px;
-    }
-
-    & > div:last-child {
-        @include mediaQ--max($bp-sm){
-            margin-bottom: 0;
+        & > div { 
+            margin: 0px 0px 45px 0px;
         }
-    }
 
-    h2 { 
-        text-transform: capitalize;
-        margin: 45px 0px 20px 0px;
-
-        @include mediaQ--max($bp-sm){
-            font-size: $font-size-xxlg;
-            line-height: 1;
-            margin: 60px 0px 30px 0px;
+        & > div:last-child {
+            @include mediaQ--max($bp-sm){
+                margin-bottom: 0;
+            }
         }
-    }
 
-    p {
-        @include mediaQ--max($bp-sm){
-            line-height: 1.3;
+        h2 { 
+            text-transform: capitalize;
+            margin: 45px 0px 20px 0px;
+
+            @include mediaQ--max($bp-sm){
+                font-size: $font-size-xlg;
+                line-height: 1;
+                margin: 30px 0px 30px 0px;
+            }
         }
-    }
+
+        p {
+            @include mediaQ--max($bp-sm){
+                line-height: 1.6;
+            }
+        }
 
 
 
@@ -190,10 +204,27 @@ article {
     }
 }
 
+#myApp .div--margin-top {
+    @include mediaQ--max($bp-sm) {
+        margin-top: 60px;
+    }
+}
 
-#myApp .margin--lg { margin: 45px 0px 45px 0px; }
+#myApp .margin--lg {
+    margin: 45px 0px 45px 0px;
 
-#myApp .padding-col--lg { padding: 0px 45px; }
+    @include mediaQ--max($bp-sm) {
+        margin: $mp-double 0;
+    }
+}
+
+#myApp .padding-col--lg { 
+    padding: 0px 45px;
+
+        @include mediaQ--max($bp-sm) {
+            padding: 0;
+        } 
+}
 
 //color text span
 
@@ -202,7 +233,19 @@ article {
     font-weight: bold;
 }
 
+//footer above space 
+.div--margin-bottom {
+    margin-bottom: 60px;
 
+    @include mediaQ--max($bp-sm) {
+        margin-bottom: 30px;
+    }
+}
+
+//left positioning
+.div--left {
+    left: -30px;
+}
 
 // jQuery addclasses
 //============================================
