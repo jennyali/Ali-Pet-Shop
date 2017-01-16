@@ -6,6 +6,11 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+        @include mediaQ--max($bp-md){
+            height: 350px;
+            background-attachment: initial;
+        }
 }
 
 .parallax--about {background-image: $parallax-bg-about;}

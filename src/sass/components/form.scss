@@ -11,11 +11,17 @@ form {
         margin: 5px 0px;
         font-family: $font-family-paragraph;
 
-        &:focus {
-            border-color: $primary-color;
-            outline: 0;
-            box-shadow: none;
-        }
+            @include mediaQ--max($bp-sm) {
+                margin: $mp-sm 0px;
+                padding: $mp-default 5px;
+                height: 100%;
+            }
+
+            &:focus {
+                border-color: $primary-color;
+                outline: 0;
+                box-shadow: none;
+            }
     }
 
     .form-control--lg-height {

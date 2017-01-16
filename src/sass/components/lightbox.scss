@@ -24,6 +24,8 @@
             padding-left: 0;
             color: $light;
             font-size: $font-size-xlg;
+
+                @include mediaQ--max($bp-sm){background: rgba(black, 1)}
         }
 
         .lightbox__cancel-btn {
@@ -34,14 +36,21 @@
             opacity: 0.5;
             transition: 0.5s;
 
-                &:hover {
-                    opacity: 1;
-                }            
+                &:hover {opacity: 1;}
+
+                @include mediaQ--max($bp-sm){
+                    position: absolute;
+                    padding: $mp-default $mp-default;
+                    top: 0;
+                    right: 0;            
+                }
         }
 
         .lightbox__content-wrapper {
             display: flex;
             margin-bottom: 100px;
+
+                @include mediaQ--max($bp-sm){margin-bottom: 0}
         }
 
         .lightbox-control {
@@ -50,21 +59,11 @@
             opacity: 0.5;
             transition: 0.5s;
 
-                &:hover {
-                    opacity: 1;
-                }
+                &:hover {opacity: 1}
 
-                @include mediaQ--max($bp-sm){
-                    display: none;
-                }
+                @include mediaQ--max($bp-sm){display: none}
         }
         
-        .lightbox-control--left {
-            text-align: right;
-        }
-
-        .lightbox-control--right {
-
-        }
+        .lightbox-control--left {text-align: right}
 }
 
