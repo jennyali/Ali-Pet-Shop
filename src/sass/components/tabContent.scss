@@ -1,0 +1,17 @@
+/* bootstraps tabs & tab-content */
+
+// currently seen in privateServices route
+
+#myApp {
+
+    .tab-content-col {position: relative}
+
+    .tab-content-img__text-overlay {
+        position: absolute;
+        background: white;
+        text-align: center;
+        transition: opacity 0.5s;
+
+            p {width: 70%}
+    }
+}

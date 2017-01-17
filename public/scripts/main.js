@@ -48,6 +48,14 @@ $dropdownAboutList = $('#dropdown-inline-about ul');
 $dropdownServices = $('#dropdown-inline-services');
 $dropdownServicesList = $('#dropdown-inline-services ul');
 
+//privateServices route
+$tabContentRow = $('.tab-content-row');
+$tabTextOverlay = $('.tab-content-img__text-overlay');
+
+$servicesSelect = $('#servicesSelect');
+$hotelServiceSm = $('#hotelServiceSm');
+$groomingServiceSm = $('#groomingServiceSm');
+
 //--------VARIABLES ----------//
 var open = false;
 var indexNumber = 0;
@@ -56,6 +64,22 @@ var indexNumber = 0;
 
 
 //------- EVENTS ----------//
+
+$servicesSelect.on({
+    'change' : function() {
+        servicesSelectController(this);
+    }
+});
+
+$tabContentRow.on({
+    'mouseenter' : function() {
+        tabContentRowController(this, true);
+    },
+
+    'mouseleave' : function() {
+        tabContentRowController(this, false);
+    }
+});
 
 $burgerMenu.on({
     'click' : function() {
@@ -98,6 +122,44 @@ $lightboxCtrlRight.on({
 =============================*/
 
 //------- FUNCTIONS ----------//
+
+//servicesSelect on privateServices sm-screen
+function servicesSelectController(that) {
+    //console.log($(that).val());
+    if ($(that).val() === "grooming") {
+
+        $hotelServiceSm.removeClass('active');
+        $groomingServiceSm.addClass('active');
+
+    } else if ($(that).val() === "hotel") {
+
+        $groomingServiceSm.removeClass('active');
+        $hotelServiceSm.addClass('active');
+
+    } else {
+        console.log("ERROR: no matching tab-pane");
+    }
+}
+
+
+//tab-content img text-overlay
+function tabContentRowController(that, boolean) {
+    
+    if(boolean) {
+
+         $(that).find($tabTextOverlay)
+                .removeClass('opacity--hide')
+                .addClass('opacity--show');
+
+    } else if (!boolean) {
+
+         $(that).find($tabTextOverlay)
+                .removeClass('opacity--show')
+                .addClass('opacity--hide');
+    } else {
+        console.log('ERROR: controller 2nd arg needs boolean value needed');
+    }
+}
 
 //dropdown menus
 function dropdownAppear(listitem, dropdown) {

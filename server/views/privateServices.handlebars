@@ -1,61 +1,165 @@
-<div>
-    <section class="container">
-        <div class="row text-center">
-            <h2 class="margin--lg">Our Private Services</h2>
-        </div>
-        <div class="row text-center">
-            <ul class="nav nav-tabs col-sm-4 col-sm-offset-4 row">
-                <li class="active col-sm-6"><a data-toggle="tab" href="#hotelService">Hotel</a></li>
-                <li class="col-sm-6"><a data-toggle="tab" href="#groomingService">Grooming</a></li>
-            </ul>
-        </div>
-    </section>
+<div id="privateServicesContent">
+    <div class="sm-screen-wrapper">
+        <section class="container section-tiText div--margin-bottom">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3>Our Services</h3>
+                    <form>
+                        <select id="servicesSelect" class="form-control form-control--lg-font">
+                            <option value="hotel">Hotel</option>
+                            <option value="grooming">Grooming</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="container section-tiText div--margin-bottom">
+            <div class="row tab-content">
+                <div class="col-sm-12 tab-pane active" id="hotelServiceSm">
 
-    <section class="container tab-content section-tab-content">
-        <div id="hotelService" class="tab-pane in active">
-            <div class="row">
-                <div class="col-sm-6">
-                    <img class="img-responsive" src="/assets/images/dogwithlead.jpeg">
-                </div>
-                <div class="col-sm-6 text-center">
-                    <h3>Doggy Day Care</h3>
-                    <p>9hr | $30.00</p>
-                    <a href="/booking"  class="btn btn-primary article--btn">Book it</a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-6">
-                    <img class="img-responsive" src="/assets/images/kittenonbed.jpeg">
-                </div>
-                <div class="col-sm-6 text-center">
-                    <h3>Over Night Stay</h3>
-                    <p>24hr | $70.00</p>
-                    <a href="/booking"  class="btn btn-primary article--btn">Book it</a>
-                </div>
-            </div>
-        </div>
-        <div id="groomingService" class="tab-pane">
-            <div class="row">
-                <div class="col-sm-6">
-                    <img class="img-responsive" src="/assets/images/hairydog.jpeg">
-                </div>
-                <div class="col-sm-6 text-center">
-                    <h3>Hair Cut</h3>
-                    <p>1hr | $20.00</p>
-                    <a href="/booking"  class="btn btn-primary article--btn">Book it</a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-6">
-                    <img class="img-responsive" src="/assets/images/happydog.jpeg">
-                </div>
-                <div class="col-sm-6 text-center">
-                    <h3>Wash and Groom</h3>
-                    <p>2hr | $40.00</p>
-                    <a href="/booking"  class="btn btn-primary article--btn">Book it</a>
-                </div>
-            </div>
-        </div>
-    </section>
+                    <!-- Hotel select options -->
+                    <div class="div-service div--margin-bottom">
+                        <img class="img-responsive" src="/assets/images/dogwithlead.jpeg">
+                        <a href="/detail">Doggy Day Care<span class="icon-arrow-40"></span></a>
+                        <div>
+                            <p>9 hr</p>
+                            <p>$30.00</p>
+                        </div>
+                        <a href="/booking"  class="btn btn-primary article--btn">Book it</a>
+                    </div>
 
+                    <div class="div-service div--margin-bottom">
+                        <img class="img-responsive" src="/assets/images/kittenonbed.jpeg">
+                        <a href="#">Over Night Stay<span class="icon-arrow-40"></span></a>
+                        <div>
+                            <p>24 hr</p>
+                            <p>$70.00</p>
+                        </div>
+                        <a href="/booking"  class="btn btn-primary article--btn">Book it</a>
+                    </div>
+                </div>
+                <div class="col-sm-12 tab-pane" id="groomingServiceSm">
+
+                    <!-- Grooming select options -->
+                    <div class="div-service div--margin-bottom">
+                        <img class="img-responsive" src="/assets/images/hairydog.jpeg">
+                        <a href="#">Hair Cut<span class="icon-arrow-40"></span></a>
+                        <div>
+                            <p>1 hr</p>
+                            <p>$20.00</p>
+                        </div>
+                        <a href="/booking"  class="btn btn-primary article--btn">Book it</a>
+                    </div>
+
+                    <div class="div-service div--margin-bottom">
+                        <img class="img-responsive" src="/assets/images/happydog.jpeg">
+                        <a href="#">Wash and Groom<span class="icon-arrow-40"></span></a>
+                        <div>
+                            <p>2 hr</p>
+                            <p>$40.00</p>
+                        </div>
+                        <a href="/booking"  class="btn btn-primary article--btn">Book it</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <div class="lg-screen-wrapper">
+        <section class="container">
+            <div class="row text-center">
+                <h2 class="margin--lg">Our Private Services</h2>
+            </div>
+            <div class="row text-center">
+                <ul class="nav col-sm-4 col-sm-offset-4 row sub-nav">
+                    <li class="active col-sm-6"><a data-toggle="tab" href="#hotelService">Hotel</a></li>
+                    <li class="col-sm-6"><a data-toggle="tab" href="#groomingService">Grooming</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="container tab-content section-tab-content">
+            <div id="hotelService" class="tab-pane in active">
+                <div class="row tab-content-row">
+                    <div class="col-sm-6 tab-content-col">
+                        <div class="tab-content-img__text-overlay opacity--hide">
+                            <p>
+                                Describe your service here. What makes it great? 
+                                Use short catchy text to tell people what you offer, 
+                                and the benefits they will receive. A great 
+                                description gets readers in the mood, and makes 
+                                them more likely to go ahead and book.
+                            </p>
+                        </div>
+                        <img class="img-responsive" src="/assets/images/dogwithlead.jpeg">
+                    </div>
+                    <div class="col-sm-6 text-center tab-content-half">
+                        <h3>Doggy Day Care</h3>
+                        <p>9hr | $30.00</p>
+                        <a href="/booking"  class="btn btn-primary article--btn">Book it</a>
+                    </div>
+                </div>
+                <div class="row tab-content-row">
+                    <div class="col-sm-6 tab-content-col">
+                        <div class="tab-content-img__text-overlay opacity--hide">
+                            <p>
+                                Describe your service here. What makes it great? 
+                                Use short catchy text to tell people what you offer, 
+                                and the benefits they will receive. A great 
+                                description gets readers in the mood, and makes 
+                                them more likely to go ahead and book.
+                            </p>
+                        </div>
+                        <img class="img-responsive" src="/assets/images/kittenonbed.jpeg">
+                    </div>
+                    <div class="col-sm-6 text-center">
+                        <h3>Over Night Stay</h3>
+                        <p>24hr | $70.00</p>
+                        <a href="/booking"  class="btn btn-primary article--btn">Book it</a>
+                    </div>
+                </div>
+            </div>
+            <div id="groomingService" class="tab-pane">
+                <div class="row tab-content-row">
+                    <div class="col-sm-6 tab-content-col">
+                        <div class="tab-content-img__text-overlay opacity--hide">
+                            <p>
+                                Describe your service here. What makes it great? 
+                                Use short catchy text to tell people what you offer, 
+                                and the benefits they will receive. A great 
+                                description gets readers in the mood, and makes 
+                                them more likely to go ahead and book.
+                            </p>
+                        </div>
+                        <img class="img-responsive" src="/assets/images/hairydog.jpeg">
+                    </div>
+                    <div class="col-sm-6 text-center">
+                        <h3>Hair Cut</h3>
+                        <p>1hr | $20.00</p>
+                        <a href="/booking"  class="btn btn-primary article--btn">Book it</a>
+                    </div>
+                </div>
+                <div class="row tab-content-row">
+                    <div class="col-sm-6 tab-content-col">
+                        <div class="tab-content-img__text-overlay opacity--hide">
+                            <p>
+                                Describe your service here. What makes it great? 
+                                Use short catchy text to tell people what you offer, 
+                                and the benefits they will receive. A great 
+                                description gets readers in the mood, and makes 
+                                them more likely to go ahead and book.
+                            </p>
+                        </div>
+                        <img class="img-responsive" src="/assets/images/happydog.jpeg">
+                    </div>
+                    <div class="col-sm-6 text-center">
+                        <h3>Wash and Groom</h3>
+                        <p>2hr | $40.00</p>
+                        <a href="/booking"  class="btn btn-primary article--btn">Book it</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 </div>

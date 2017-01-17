@@ -255,6 +255,14 @@ article {
     display: none;
 }
 
+#myApp .opacity--show {
+    opacity: 1;
+}
+
+#myApp .opacity--hide {
+    opacity: 0;
+}
+
 #app__header .display--none {
     display: none;
 }
