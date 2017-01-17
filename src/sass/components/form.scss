@@ -5,29 +5,37 @@ form {
         margin: 0;
     }
 
-    .form-control {
-        border-radius: 0;
-        border: 1px solid $dark;
-        margin: 5px 0px;
-        font-family: $font-family-paragraph;
 
-            @include mediaQ--max($bp-sm) {
-                margin: $mp-sm 0px;
-                padding: $mp-default 5px;
-                height: 100%;
-            }
-
-            &:focus {
-                border-color: $primary-color;
-                outline: 0;
-                box-shadow: none;
-            }
-    }
 
     .form-control--lg-height {
         height: 140px;
     }
 }
+
+.form-control {
+    border-radius: 0;
+    border: 1px solid $dark;
+    margin: 5px 0px;
+    font-family: $font-family-paragraph;
+
+        @include mediaQ--max($bp-sm) {
+            margin: $mp-sm 0px;
+            padding: $mp-default 5px;
+            height: 100%;
+        }
+
+        &:focus {
+            border-color: $primary-color;
+            outline: 0;
+            box-shadow: none;
+        }
+}
+
+.form-control--lg-font {
+    font-size: $font-size-md;
+    padding: $mp-sm;
+}
+
 
 .alert-success {
     text-align: left;

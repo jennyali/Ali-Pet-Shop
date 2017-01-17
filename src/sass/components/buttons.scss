@@ -22,6 +22,10 @@
     .btn-primary {
         background: $primary-color;
         border: none;
+
+        &:hover {  
+            @include colorMe(null, lighten($primary-color, 10%));
+        }
             
     }
 
@@ -37,4 +41,7 @@
             margin: $mp-double 0px;
         }
     }
+
+
+
 }

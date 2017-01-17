@@ -63,3 +63,16 @@
         }
 }
 
+.sub-nav {  
+// currently for private services route
+    & > li > a {
+        font-size: $font-size-md;
+        padding: 0 $mp-default;
+    }
+
+    li:first-child {border-right: 1px solid $dark}
+
+    li:focus, a:focus {outline: none}
+
+    a:hover, a:focus {color: $primary-color}
+}
