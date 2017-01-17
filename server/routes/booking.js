@@ -5,6 +5,7 @@ var controller = require('../controllers/bookingController');
 
 router
     .route('/')
-    .get(controller);
+    .get(controller.renderPage)
+    .post(controller.postRenderPage);
 
 module.exports = router;

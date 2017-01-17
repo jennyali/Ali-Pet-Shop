@@ -1,22 +1,18 @@
-<div>
-
-    <section>
-        <a href="/services/privateServices"><span class="icon-arrow-39"></span>Back</a>
-        <div>
-            <p class="lead">Doggy Day Care</p>
-            <div>
-                <p>9 hr</p>
-                <p>$30.00</p>
+<div class="detail-wrapper">
+    <section class="section-tiText div--margin-bottom">
+        <a href="/services/privateServices" class="detail-wrapper__link col-sm-12"><span class="icon-arrow-39"></span>Back</a>
+        <div class="row detail-wrapper__service">
+            <div class="col-sm-12">
+                <p class="lead">{{service.name}}</p>
+                <div class="div-service">
+                    <p>{{service.hours}} hr</p>
+                    <p>${{service.cost}}</p>
+                </div>
+                <div>
+                    <p>{{service.textBlock}}</p>
+                </div>
+                <a href="/services/privateServices/booking"  class="btn btn-primary article--btn">Book it</a>
             </div>
-            <div>
-                Describe your service here. What makes it great? 
-                Use short catchy text to tell people what you offer, 
-                and the benefits they will receive. A great 
-                description gets readers in the mood, and makes 
-                them more likely to go ahead and book.
-            </div>
-            <a href="/services/privateServices/booking"  class="btn btn-primary article--btn">Book it</a>
         </div>
     </section>
-
 </div>

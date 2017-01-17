@@ -3,18 +3,21 @@ var privateServicesModel = require("../models/privateServicesModel");
 
 exports.renderPage = function(req, res) {
     res.render('privateServices', {
-        serviceOne: privateServicesModel[0],
-        serviceTwo: privateServicesModel[1],
-        serviceThree: privateServicesModel[2],
-        serviceFour: privateServicesModel[3],
+        serviceOne: privateServicesModel.servicesList[0],
+        serviceTwo: privateServicesModel.servicesList[1],
+        serviceThree: privateServicesModel.servicesList[2],
+        serviceFour: privateServicesModel.servicesList[3],
     });
-};
-
-exports.sendToRoute = function(req, res) {
-    res.redirect('/services/privateServices/detail');
 };
 
 
 exports.renderSubPage = function(req, res) {
-    res.render('detail');
+
+    var serviceId = req.body.serviceId;
+    var serviceObj = privateServicesModel.serviceFilter(serviceId);
+
+    res.render('detail', {
+        service: serviceObj
+    });
+
 };

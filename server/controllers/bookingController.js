@@ -1,7 +1,18 @@
 /** BOOKING CONTROLLER */
+var privateServicesModel = require("../models/privateServicesModel");
 
-const bookingController = function(req, res) {
-    res.render('booking');
-}
+module.exports = {
 
-module.exports = bookingController;
+    renderPage : function(req, res) {
+        res.render('booking');
+    },
+
+    postRenderPage :  function(req, res) {
+        var serviceId = req.body.serviceId;
+        var serviceObj = privateServicesModel.serviceFilter(serviceId);
+
+        res.render('booking', {
+            service: serviceObj
+        });
+    }
+};
