@@ -1,7 +1,20 @@
 /** PRIVATE CONTROLLER */
+var privateServicesModel = require("../models/privateServicesModel");
 
-const privateServicesController = function(req, res) {
-    res.render('privateServices');
-}
+exports.renderPage = function(req, res) {
+    res.render('privateServices', {
+        serviceOne: privateServicesModel[0],
+        serviceTwo: privateServicesModel[1],
+        serviceThree: privateServicesModel[2],
+        serviceFour: privateServicesModel[3],
+    });
+};
 
-module.exports = privateServicesController;
+exports.sendToRoute = function(req, res) {
+    res.redirect('/services/privateServices/detail');
+};
+
+
+exports.renderSubPage = function(req, res) {
+    res.render('detail');
+};
