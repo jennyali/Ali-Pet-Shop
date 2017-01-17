@@ -49,4 +49,56 @@
             display: block;
         }
     }
+
+}
+
+
+
+#myApp {
+
+    .detail-wrapper__link{
+        color: $primary-color;
+
+        span {
+            padding-right: $mp-sm;
+        }
+    }
+
+    .detail-wrapper__service {
+        margin: $mp-double 0 $mp-triple 0;
+
+        .btn {
+            margin-top: $mp-default;
+        }
+    }
+
+            .div-service {
+
+            div, img {
+                margin: $mp-sm 0;
+            }
+
+            a {
+                font-size: $font-size-md;
+            }
+
+            span {
+                 color: $primary-color;
+                 font-size: $font-size-sm;
+                 padding-left: $mp-sm;
+            }
+
+            p {
+                display: inline-block;
+            }
+
+            p:first-child {
+                padding-right: $mp-default;
+                border-right: 2px solid $primary-color;
+            }
+
+            p:last-child {
+                padding: 0 $mp-default;
+            }
+        }
 }

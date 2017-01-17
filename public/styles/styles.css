@@ -6328,6 +6328,13 @@ form .form-group {
 form .form-control--lg-height {
   height: 140px; }
 
+form .btn--no-style {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 16px;
+  outline: none; }
+
 .form-control {
   border-radius: 0;
   border: 1px solid #666666;
@@ -6489,5 +6496,36 @@ form .form-control--lg-height {
   @media (min-width: 768px) {
     #privateServicesContent .lg-screen-wrapper {
       display: block; } }
+
+#myApp .detail-wrapper__link {
+  color: #493D6D; }
+  #myApp .detail-wrapper__link span {
+    padding-right: 10px; }
+
+#myApp .detail-wrapper__service {
+  margin: 30px 0 60px 0; }
+  #myApp .detail-wrapper__service .btn {
+    margin-top: 15px; }
+
+#myApp .div-service div, #myApp .div-service img {
+  margin: 10px 0; }
+
+#myApp .div-service a {
+  font-size: 16px; }
+
+#myApp .div-service span {
+  color: #493D6D;
+  font-size: 12px;
+  padding-left: 10px; }
+
+#myApp .div-service p {
+  display: inline-block; }
+
+#myApp .div-service p:first-child {
+  padding-right: 15px;
+  border-right: 2px solid #493D6D; }
+
+#myApp .div-service p:last-child {
+  padding: 0 15px; }
 
 /*# sourceMappingURL=styles.css.map */

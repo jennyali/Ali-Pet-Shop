@@ -26,7 +26,7 @@ router
 router
     .route('/privateServices')
     .get(privateServicesController.renderPage)
-    .post(privateServicesController.sendToRoute);
+    //.post(privateServicesController.sendToRoute);
 
 router
     .route('/privateServices/detail')

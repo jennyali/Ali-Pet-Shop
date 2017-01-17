@@ -45,4 +45,15 @@ privateServicesList = _.map(privateServicesList, function(item) {
     return new service(item.name, item.hours, item.cost, item.image, item.textBlock);
 });
 
-module.exports = privateServicesList;
+//module.exports = privateServicesList;
+
+module.exports = {
+    servicesList : privateServicesList,
+    serviceFilter : function(serviceId) {
+
+        var givenId = Number(serviceId);
+        var foundService = _.filter(this.servicesList, { 'id' : givenId });
+
+        return foundService[0];
+    }
+};
