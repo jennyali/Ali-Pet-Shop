@@ -25,6 +25,11 @@ router
 
 router
     .route('/privateServices')
-    .get(privateServicesController);
+    .get(privateServicesController.renderPage)
+    .post(privateServicesController.sendToRoute);
+
+router
+    .route('/privateServices/detail')
+    .post(privateServicesController.renderSubPage);
 
 module.exports = router;
