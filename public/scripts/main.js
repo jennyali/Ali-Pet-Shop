@@ -67,6 +67,7 @@ $aboutStaffSection = $('#aboutArticles');
 //All sections
 $allSections = $('section');
 $allArticles = $('article');
+$articleContainer = $('.article__container');
 
 //--------VARIABLES ----------//
 var open = false;
@@ -306,7 +307,7 @@ function ifInView(){
     var window_top_position = $window.scrollTop();
     var window_bottom_position = (window_top_position + window_height);
 
-    $.each($allSections, function(){
+    $.each($articleContainer, function(){
             var $element = $(this);
             var element_height = $element.outerHeight();
             var element_top_position = $element.offset().top;
@@ -315,9 +316,8 @@ function ifInView(){
             if ((element_bottom_position >= window_top_position) && (element_top_position <= window_bottom_position)){
                 $element.addClass('in-view');
                 
-            } else {
-                $element.removeClass('in-view');
-               
+            //} else {
+                //$element.removeClass('in-view');    
         }
     });
 }
