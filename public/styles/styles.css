@@ -5800,6 +5800,11 @@ body {
 .tiText p, section p {
   line-height: 1.6; }
 
+.tiText .logo__style, section .logo__style {
+  font-weight: bolder;
+  font-size: 56px;
+  margin: 0; }
+
 .tiText--invert h1, .tiText--invert h2 {
   color: #FFFFFF; }
 
@@ -5865,7 +5870,7 @@ article a {
       -ms-flex-pack: center;
       justify-content: center; } }
 
-@media (max-width: 768px) {
+@media (max-width: 420px) {
   .section-wrapper section {
     margin-bottom: 60px; }
   .section-wrapper section:first-child, .section-wrapper section:last-child {
@@ -5921,9 +5926,11 @@ article a {
       -ms-flex-pack: center;
       justify-content: center; }
 
-@media (max-width: 768px) {
-  #myApp .div--margin-top {
-    margin-top: 60px; } }
+#myApp .div--margin-top {
+  margin-top: 60px; }
+  @media (max-width: 768px) {
+    #myApp .div--margin-top {
+      margin-top: 60px; } }
 
 #myApp .margin--lg {
   margin: 45px 0px 45px 0px; }
@@ -5949,6 +5956,10 @@ article a {
 
 .div--left {
   left: -30px; }
+
+@media (max-width: 420px) {
+  .align-text--center {
+    text-align: center; } }
 
 .display--none {
   display: none; }
@@ -6032,128 +6043,124 @@ article a {
 
 /** Carousel **/
 @media (max-width: 420px) {
-  #section__home-carousel .carousel-indicators li {
+  #myApp .carousel-indicators li {
     height: 20px;
     width: 20px;
     background: rgba(255, 255, 255, 0.5);
     margin: 0px 5px;
     border: 1px solid transparent; }
-    #section__home-carousel .carousel-indicators li.active {
+    #myApp .carousel-indicators li.active {
       background: #493D6D; } }
 
-#section__home-carousel .carousel-inner {
+#myApp .carousel-inner {
   height: 25rem; }
   @media (min-width: 420px) {
-    #section__home-carousel .carousel-inner {
+    #myApp .carousel-inner {
       height: 30rem; } }
   @media (min-width: 420px) and (min-width: 768px) {
-    #section__home-carousel .carousel-inner {
+    #myApp .carousel-inner {
       height: 500px; } }
   @media (min-width: 420px) and (min-width: 768px) and (min-width: 992px) {
-    #section__home-carousel .carousel-inner {
+    #myApp .carousel-inner {
       height: 700px; } }
 
-#section__home-carousel .item {
-  height: 100%;
-  position: relative; }
-  #section__home-carousel .item img {
+#myApp .item {
+  height: 100%; }
+  #myApp .item img {
     max-width: 40%;
     position: absolute;
     bottom: 0px; }
     @media (max-width: 992px) {
-      #section__home-carousel .item img {
+      #myApp .item img {
         max-width: 35%;
         position: absolute;
         bottom: 0px; } }
   @media (max-width: 992px) and (max-width: 768px) {
-    #section__home-carousel .item img {
+    #myApp .item img {
       max-width: 28%; } }
   @media (max-width: 992px) and (max-width: 768px) and (max-width: 768px) {
-    #section__home-carousel .item img {
+    #myApp .item img {
       max-width: 35%; } }
 
-#section__home-carousel .item-one {
-  background: #E84855; }
-  @media (min-width: 768px) {
-    #section__home-carousel .item-one {
-      box-shadow: inset 9px -200px 218px -51px white; } }
-
-#section__home-carousel .item-two {
-  background: #1B998B; }
-  @media (min-width: 768px) {
-    #section__home-carousel .item-two {
-      box-shadow: inset 9px -200px 218px -51px white; } }
-  #section__home-carousel .item-two img {
-    right: 0px;
-    bottom: 0px; }
-    @media (max-width: 420px) {
-      #section__home-carousel .item-two img {
-        bottom: 0px; } }
-
-#section__home-carousel .item-three {
-  background: #FF9B71; }
-  @media (min-width: 768px) {
-    #section__home-carousel .item-three {
-      box-shadow: inset 9px -200px 218px -51px white; } }
-
-#section__home-carousel .carousel-text__wrapper {
+#myApp .carousel-text__wrapper {
   position: absolute;
   left: 50%;
   top: 25%;
   transform: translateX(-50%);
   max-width: 380px;
   color: #FFFFFF; }
-  #section__home-carousel .carousel-text__wrapper h1, #section__home-carousel .carousel-text__wrapper h2, #section__home-carousel .carousel-text__wrapper h3, #section__home-carousel .carousel-text__wrapper h4 {
+  #myApp .carousel-text__wrapper h1, #myApp .carousel-text__wrapper h2, #myApp .carousel-text__wrapper h3, #myApp .carousel-text__wrapper h4 {
     font-family: "Bubblegum Sans", cursive; }
-  #section__home-carousel .carousel-text__wrapper p, #section__home-carousel .carousel-text__wrapper li, #section__home-carousel .carousel-text__wrapper a {
+  #myApp .carousel-text__wrapper p, #myApp .carousel-text__wrapper li, #myApp .carousel-text__wrapper a {
     font-family: "Roboto", sans-serif; }
   @media (max-width: 992px) {
-    #section__home-carousel .carousel-text__wrapper {
+    #myApp .carousel-text__wrapper {
       top: 10%; } }
   @media (max-width: 992px) and (max-width: 768px) {
-    #section__home-carousel .carousel-text__wrapper {
+    #myApp .carousel-text__wrapper {
       top: 5%;
       max-width: 300px; } }
   @media (max-width: 992px) and (max-width: 768px) and (max-width: 420px) {
-    #section__home-carousel .carousel-text__wrapper {
+    #myApp .carousel-text__wrapper {
       width: 150px; } }
-  #section__home-carousel .carousel-text__wrapper h1 {
+  #myApp .carousel-text__wrapper h1 {
     font-size: 36px;
     line-height: 1; }
     @media (min-width: 420px) {
-      #section__home-carousel .carousel-text__wrapper h1 {
+      #myApp .carousel-text__wrapper h1 {
         font-size: 40px; } }
   @media (min-width: 420px) and (min-width: 768px) {
-    #section__home-carousel .carousel-text__wrapper h1 {
+    #myApp .carousel-text__wrapper h1 {
       font-size: 56px; } }
   @media (min-width: 420px) and (min-width: 768px) and (min-width: 992px) {
-    #section__home-carousel .carousel-text__wrapper h1 {
+    #myApp .carousel-text__wrapper h1 {
       font-size: 72px; } }
   @media (max-width: 420px) {
-    #section__home-carousel .carousel-text__wrapper p {
+    #myApp .carousel-text__wrapper p {
       display: none; } }
 
-#section__home-carousel .carousel-fade .carousel-inner .item {
+.item-one {
+  background: #E84855; }
+  @media (min-width: 768px) {
+    .item-one {
+      box-shadow: inset 9px -200px 218px -51px white; } }
+
+.item-two {
+  background: #1B998B; }
+  @media (min-width: 768px) {
+    .item-two {
+      box-shadow: inset 9px -200px 218px -51px white; } }
+  .item-two img {
+    right: 0px;
+    bottom: 0px; }
+
+.item-three {
+  background: #FF9B71; }
+  @media (min-width: 768px) {
+    .item-three {
+      box-shadow: inset 9px -200px 218px -51px white; } }
+
+.carousel-fade .carousel-inner .item {
   transition-property: opacity; }
 
-#section__home-carousel .carousel-fade .carousel-inner .item,
-#section__home-carousel .carousel-fade .carousel-inner .active.left,
-#section__home-carousel .carousel-fade .carousel-inner .active.right {
-  opacity: 0.5; }
+.carousel-fade .carousel-inner .item,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  opacity: 0; }
 
-#section__home-carousel .carousel-fade .carousel-inner .active,
-#section__home-carousel .carousel-fade .carousel-inner .next.left,
-#section__home-carousel .carousel-fade .carousel-inner .prev.right {
+.carousel-fade .carousel-inner .active,
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
   opacity: 1; }
 
-#section__home-carousel .carousel-fade .carousel-inner .next,
-#section__home-carousel .carousel-fade .carousel-inner .prev,
-#section__home-carousel .carousel-fade .carousel-inner .active.left,
-#section__home-carousel .carousel-fade .carousel-inner .active.right {
+.carousel-fade .carousel-inner .next,
+.carousel-fade .carousel-inner .prev,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
   left: 0;
   transform: translate3d(0, 0, 0); }
 
-#section__home-carousel .carousel-fade .carousel-control {
+.carousel-fade .carousel-control {
   z-index: 2; }
 
 /* PARALLAX */
@@ -6385,6 +6392,12 @@ form .btn--no-style {
   #myApp .tab-content-img__text-overlay p {
     width: 70%; }
 
+#map {
+  height: 300px; }
+  @media (max-width: 420px) {
+    #map {
+      margin-bottom: 30px; } }
+
 /** APP HEADER */
 #app__header h1, #app__header h2, #app__header h3, #app__header h4 {
   font-family: "Bubblegum Sans", cursive; }
@@ -6394,7 +6407,7 @@ form .btn--no-style {
 
 #app__header .app-logo {
   max-width: 180px;
-  margin: 15px 0; }
+  margin: 30px 0 0 0; }
 
 #app__header .logo__text {
   font-weight: bold;
@@ -6497,9 +6510,9 @@ form .btn--no-style {
     #privateServicesContent .lg-screen-wrapper {
       display: block; } }
 
-#myApp .detail-wrapper__link {
+#myApp .btn-link--back {
   color: #493D6D; }
-  #myApp .detail-wrapper__link span {
+  #myApp .btn-link--back span {
     padding-right: 10px; }
 
 #myApp .detail-wrapper__service {

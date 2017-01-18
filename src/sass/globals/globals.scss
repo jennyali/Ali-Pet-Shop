@@ -38,7 +38,12 @@ section {
      
      p{line-height: 1.6;}
 
-            @include mediaQ--max($bp-sm){}
+    .logo__style {
+        font-weight: bolder;
+        font-size: 56px;
+        margin: 0;
+    }
+
 }
 
 .tiText--invert {
@@ -121,7 +126,7 @@ article {
 
 .section-wrapper {
 
-    @include mediaQ--max($bp-sm) {
+    @include mediaQ--max($bp-xs) {
         section {
             margin-bottom: 60px;
         }
@@ -205,6 +210,7 @@ article {
 }
 
 #myApp .div--margin-top {
+    margin-top: 60px;
     @include mediaQ--max($bp-sm) {
         margin-top: 60px;
     }
@@ -246,6 +252,16 @@ article {
 .div--left {
     left: -30px;
 }
+
+// Align text to the center on sm-screens
+.align-text--center {
+    @include mediaQ--max($bp-xs) {
+        text-align: center;
+    }
+}
+
+//logo text
+
 
 // jQuery addclasses
 //============================================

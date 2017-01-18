@@ -1,21 +1,21 @@
 <div>
-    <section class="container">
-        <div class="row">
-            <p><a href="/services/privateServices">Back</a></p>
+    <section class="container section-tiText div--margin-top">
+        <div class="row align-text--center">
+            <a class="btn-link--back" href="/services/privateServices"><span class="icon-arrow-39"></span>Back</a>
             <h3>Schedule Online</h3>
             <p>Schedule in Our Time Zone: GMT +02:00</p>
         </div>
     </section>
 
-    <section class="container">
+    <section class="container section-tiText div--margin-bottom">
         <div class="row">
-            <div class="col-sm-8">
+            <div class="col-sm-8 div--margin-bottom">
                 <div id="calendar"></div>
             </div>
-            <div class="col-sm-4 text-center">
+            <div class="col-sm-4 text-center hidden-xs">
                 <h3>{{service.name}}</h3>
                 <p>{{service.hours}} hr | ${{service.cost}}</p>
-                <button class="btn btn-primary">Next</button>
+                <button class="btn btn-primary disabled">Next</button>
             </div>
         </div>
     </section>
