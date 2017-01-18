@@ -1,0 +1,9 @@
+// ** Google maps **/
+
+#map {
+    height: 300px;
+
+    @include mediaQ--max($bp-xs) {
+        margin-bottom: $mp-double;
+    }
+}

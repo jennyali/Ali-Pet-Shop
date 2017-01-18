@@ -1,6 +1,6 @@
 /** Carousel **/
 
-#section__home-carousel {
+#myApp {
 
     .carousel-indicators{
         @include mediaQ--max($bp-xs){
@@ -36,7 +36,7 @@
 
         .item {
             height: 100%;
-            position: relative;
+            //position: relative;
             
             img{
                 max-width: 40%;
@@ -59,42 +59,6 @@
                 }
             }
         }
-
-
-        .item-one {
-            background: $secondary-color;
-        
-                @include mediaQ--min($bp-sm){
-                    @include gradient;
-                }
-        }
-
-        .item-two {
-            background: $contrast-color;
-                @include mediaQ--min($bp-sm){
-                    @include gradient;
-                }
-
-                img{
-                    //max-width: 120%;
-                    right: 0px;
-                    bottom: 0px;
-
-                        @include mediaQ--max($bp-xs){
-                            //max-width: 55%;
-                            bottom: 0px;
-                            //left: 220px;
-                        }
-            }
-        }
-
-        .item-three {
-            background: $extra-color;
-                @include mediaQ--min($bp-sm){
-                    @include gradient;
-                }
-        }
-
 
     .carousel-text__wrapper{
         @include tiText__font-family--base;
@@ -141,6 +105,34 @@
                 }
             }
     }
+}
+
+.item-one {
+    background: $secondary-color;
+        
+        @include mediaQ--min($bp-sm){
+            @include gradient;
+        }
+    }
+
+.item-two {
+    background: $contrast-color;
+        @include mediaQ--min($bp-sm) {
+            @include gradient;
+        }
+
+            img {
+                right: 0px;
+                bottom: 0px;
+            }
+    }
+
+.item-three {
+    background: $extra-color;
+        @include mediaQ--min($bp-sm){
+            @include gradient;
+        }
+}
 
     //==== FADE CAROUSEL CODE ====//
 
@@ -153,7 +145,7 @@
         .item,
         .active.left,
         .active.right {
-            opacity: 0.5;
+            opacity: 0;
         }
 
         .active,
@@ -176,5 +168,5 @@
     }
 }
 
-}
+
 

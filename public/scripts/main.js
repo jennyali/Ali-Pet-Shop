@@ -28,6 +28,10 @@ var photosArray = $('.gallery-photo img'); // gallery for lightbox
 //------- SELECTORS ----------//
 var $galleryPhoto = $('.gallery-photo img');
 
+//window/screen
+var windowWidth = window.innerWidth;
+var $window = $(window);
+
 // lightbox
 var $lightboxHome = $('#lightboxHome');
 var $lightboxCancelBtn = $('.lightbox__cancel-btn');
@@ -56,6 +60,14 @@ $servicesSelect = $('#servicesSelect');
 $hotelServiceSm = $('#hotelServiceSm');
 $groomingServiceSm = $('#groomingServiceSm');
 
+//sub-nav about Staff section
+$aboutStaffLink = $('.aboutArticles--scroll');
+$aboutStaffSection = $('#aboutArticles');
+
+//All sections
+$allSections = $('section');
+$allArticles = $('article');
+
 //--------VARIABLES ----------//
 var open = false;
 var indexNumber = 0;
@@ -64,6 +76,12 @@ var indexNumber = 0;
 
 
 //------- EVENTS ----------//
+
+$aboutStaffLink.on({
+    'click' : function() {
+        clickScroll($aboutStaffSection);
+    }
+});
 
 $servicesSelect.on({
     'change' : function() {
@@ -114,6 +132,10 @@ $lightboxCtrlRight.on({
     }
 });
 
+//scroll view animate EVENTS
+$window.on('scroll', ifInView); //---- scroll event 
+
+$window.trigger('scroll');
 
 /*===========================
 
@@ -170,7 +192,7 @@ function dropdownAppear(listitem, dropdown) {
 
         'mouseleave': function() {
             $(dropdown).fadeOut();
-        }
+        },
     });
 }
 
@@ -263,7 +285,6 @@ function lightboxBtnController(boolean){
 }
 
 // lightbox img UPDATE 
-
 function lightboxImgUpdate(that){
     var src = $(that).attr('src');
     var id = $(that).attr('data-id');
@@ -272,10 +293,41 @@ function lightboxImgUpdate(that){
     $lightboxImg.attr('data-id', id);
 }
 
+//scroll effect - currently for Staff sub-nav
+function clickScroll(selector){             // scroll up effect
+    $('body').animate({
+        scrollTop: selector.offset().top -145
+    }, 1000);
+}
+
+//function for in-view animations
+function ifInView(){
+    var window_height = $window.height();
+    var window_top_position = $window.scrollTop();
+    var window_bottom_position = (window_top_position + window_height);
+
+    $.each($allSections, function(){
+            var $element = $(this);
+            var element_height = $element.outerHeight();
+            var element_top_position = $element.offset().top;
+            var element_bottom_position = (element_top_position + element_height);
+
+            if ((element_bottom_position >= window_top_position) && (element_top_position <= window_bottom_position)){
+                $element.addClass('in-view');
+                
+            } else {
+                $element.removeClass('in-view');
+               
+        }
+    });
+}
+
+//console.log($allSections);
 
 //------- FUNCTION CALLS ----------//
 $('#calendar').fullCalendar();
 $('.carousel').carousel();
 dropdownAppear($dropdownAbout, $dropdownAboutList);
 dropdownAppear($dropdownServices, $dropdownServicesList);
+
 });
