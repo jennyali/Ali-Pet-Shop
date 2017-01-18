@@ -5758,6 +5758,38 @@ button.close {
     ** Extends **
     - these are classes that can only be seen here
 */
+@keyframes articleBounce {
+  0% {
+    transform: translateY(20px);
+    opacity: 0; }
+  50% {
+    transform: translateY(-10px);
+    opacity: 1; }
+  100% {
+    transform: translateY(0px);
+    opacity: 1; } }
+
+.article__container.in-view article {
+  position: relative;
+  opacity: 0; }
+
+.article__container.in-view article:first-child {
+  animation-name: articleBounce;
+  animation-duration: 1s;
+  animation-fill-mode: forwards; }
+
+.article__container.in-view article:nth-child(2) {
+  animation-delay: 0.5s;
+  animation-name: articleBounce;
+  animation-duration: 1s;
+  animation-fill-mode: forwards; }
+
+.article__container.in-view article:last-child {
+  animation-delay: 1s;
+  animation-name: articleBounce;
+  animation-duration: 1s;
+  animation-fill-mode: forwards; }
+
 body {
   background-color: #FFFFFF; }
 
