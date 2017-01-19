@@ -6171,6 +6171,10 @@ article a {
   @media (min-width: 768px) {
     .item-three {
       box-shadow: inset 9px -200px 218px -51px white; } }
+  @media (max-width: 768px) {
+    .item-three img {
+      transform: scale(1.6);
+      left: 8%; } }
 
 .carousel-fade .carousel-inner .item {
   transition-property: opacity; }
