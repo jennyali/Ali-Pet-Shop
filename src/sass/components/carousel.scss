@@ -129,8 +129,15 @@
 
 .item-three {
     background: $extra-color;
-        @include mediaQ--min($bp-sm){
+        @include mediaQ--min($bp-sm) {
             @include gradient;
+        }
+
+        @include mediaQ--max($bp-sm) {
+            img {
+                transform: scale(1.6);
+                left: 8%;
+            }
         }
 }
 
