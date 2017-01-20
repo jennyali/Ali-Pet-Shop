@@ -6191,7 +6191,7 @@ body {
   padding-left: 0;
   color: #FFFFFF;
   font-size: 28px; }
-  @media (max-width: 768px) {
+  @media (max-width: 420px) {
     #lightboxHome .lightboxInner {
       background: black; } }
 
@@ -6204,7 +6204,7 @@ body {
   transition: 0.5s; }
   #lightboxHome .lightbox__cancel-btn:hover {
     opacity: 1; }
-  @media (max-width: 768px) {
+  @media (max-width: 420px) {
     #lightboxHome .lightbox__cancel-btn {
       position: absolute;
       padding: 15px 15px;
@@ -6215,7 +6215,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 100px; }
-  @media (max-width: 768px) {
+  @media (max-width: 420px) {
     #lightboxHome .lightbox__content-wrapper {
       margin-bottom: 0; } }
 
@@ -6228,7 +6228,7 @@ body {
   transition: 0.5s; }
   #lightboxHome .lightbox-control:hover {
     opacity: 1; }
-  @media (max-width: 768px) {
+  @media (max-width: 420px) {
     #lightboxHome .lightbox-control {
       display: none; } }
 
@@ -6289,10 +6289,12 @@ form .btn--no-style {
   width: 80%; }
 
 .icon-bars {
-  color: #493D6D; }
+  color: #493D6D;
+  cursor: pointer; }
 
 .icon-delete-1 {
-  font-size: 24px; }
+  font-size: 24px;
+  cursor: pointer; }
 
 .cancel-menu-btn {
   position: relative;
