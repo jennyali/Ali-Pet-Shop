@@ -1,4 +1,56 @@
 
+
+article {
+
+    img { 
+        margin: 0px 0px 30px 0px;
+    }
+
+    a { 
+        margin: 10px 0px;
+    }
+
+}
+
+.article--portaits {
+    padding: 0px 30px;
+
+    @include mediaQ--max($bp-sm) {
+        margin-bottom: $mp-double;
+    }
+
+    img {
+        margin: 0px;
+        width: 100%;
+    }
+
+    figcaption {
+            //border-bottom-right-radius: 20px;
+        padding: 15px;
+
+        h4{ 
+            margin: 0px;
+        }
+
+        p{ 
+            margin: 0px;
+        }
+    }
+}
+
+
+#myApp .article__container{
+    align-items: baseline;
+    display: flex;
+
+        @include mediaQ--max($bp-sm) {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+}
+
 // articles color in when hovered over
 #homeArticles, #servicesArticles {
 
@@ -9,37 +61,43 @@
         
         &:hover {  
 
-            .btn-primary, img {@include colorMe(null, lighten($primary-color, 10%))}
+            .btn-primary, img {
+                @include colorMe(null, lighten($primary-color, 10%))
+            }
 
-            h4 {@include colorMe(lighten($primary-color, 10%))}
+            h4 {
+                @include colorMe(lighten($primary-color, 10%))
+            }
         }
+    }
+}
 
+// article in-view animations
+.article__container.in-view {
+
+    article {
+        position: relative;
+        opacity: 0;
     }
 
-   /* article:nth-child(1) {
-        &:hover {  
-
-            .btn-primary, img {@include colorMe(null, $secondary-color)}
-
-            h4 {@include colorMe($secondary-color)}
-        }
+    article:first-child {
+        animation-name: articleBounce;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
     }
 
     article:nth-child(2) {
-        &:hover {
-
-            .btn-primary, img {@include colorMe(null, $contrast-color)}
-
-            h4 {@include colorMe($contrast-color)}
-        }
+        animation-delay: 0.5s;
+        animation-name: articleBounce;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
     }
 
-    article:nth-child(3) {
-        &:hover {
+    article:last-child {
+        animation-delay: 1s;
+        animation-name: articleBounce;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
 
-            .btn-primary, img {@include colorMe(null, $extra-color)}
-
-            h4{@include colorMe($extra-color)}
-        }
-    }*/
 }

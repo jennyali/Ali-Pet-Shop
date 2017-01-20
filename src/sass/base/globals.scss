@@ -1,0 +1,125 @@
+
+// Global body Styling
+//----------------------------------//
+
+body {
+    background-color: $light;
+
+    .container {
+        @include mediaQ--min($bp-md){
+            width: 900px;
+        }
+    }
+}
+
+// Global Text Styling
+//----------------------------------//
+
+.tiText {
+    @include tiText__font-family--base;
+    @include tiText__colors(
+        $primary-color, 
+        $primary-color, 
+        $dark);
+    @include tiText__font-size(
+        $font-size-xlg,
+        $font-size-xxxlg,
+        $font-size-base
+    );
+     
+     p{line-height: 1.6;}
+
+    .logo__style {
+        font-weight: bolder;
+        font-size: 56px;
+        margin: 0;
+    }
+
+}
+
+.tiText--invert {
+    @include tiText__colors(
+        $light,
+        $light,
+        $light
+    )
+}
+
+.tiText--invert-bg { background: $primary-color; }
+
+//color text span
+.highlightText {
+    color: $primary-color;
+    font-weight: bold;
+}
+
+// Align text to the center on sm-screens
+.align-text--center {
+    @include mediaQ--max($bp-xs) {
+        text-align: center;
+    }
+}
+
+
+
+// Global margin & padding classes
+//-------------------------------------------//
+
+#myApp .div--margin-top {
+    margin-top: 60px;
+    @include mediaQ--max($bp-sm) {
+        margin-top: 60px;
+    }
+}
+
+#myApp .margin--lg {
+    margin: 45px 0px 45px 0px;
+
+    @include mediaQ--max($bp-sm) {
+        margin: $mp-double 0;
+    }
+}
+
+#myApp .padding-col--lg { 
+    padding: 0px 45px;
+
+        @include mediaQ--max($bp-sm) {
+            padding: 0;
+        } 
+}
+
+//footer above space 
+.div--margin-bottom {
+    margin-bottom: 60px;
+
+    @include mediaQ--max($bp-sm) {
+        margin-bottom: 30px;
+    }
+}
+
+//left positioning
+.div--left {
+    left: -30px;
+}
+
+
+
+// jQuery addclasses
+//============================================
+//hidden / visiable 
+
+.display--none {
+    display: none;
+}
+
+#myApp .opacity--show {
+    opacity: 1;
+}
+
+#myApp .opacity--hide {
+    opacity: 0;
+}
+
+#app__header .display--none {
+    display: none;
+}

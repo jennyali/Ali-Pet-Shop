@@ -24,11 +24,11 @@
         border: none;
 
         &:hover {  
-            @include colorMe(null, lighten($primary-color, 10%));
-        }
-            
+            @include colorMe(null, lighten(
+                $primary-color, 10%
+            ));
+        }       
     }
-
 
     .btn-primary--small {
         padding: $mp-sm;
@@ -41,7 +41,4 @@
             margin: $mp-double 0px;
         }
     }
-
-
-
 }

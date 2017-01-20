@@ -1,0 +1,11 @@
+// ** All things related to events and animations**//
+
+
+// article in-view styles - to create a bounce effect in a ripple left to right
+@keyframes articleBounce {
+    0% {transform: translateY(20px); opacity: 0;}
+    50% {transform: translateY(-10px); opacity: 1;}
+    100% {transform: translateY(0px); opacity: 1;}
+}
+
+

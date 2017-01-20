@@ -1,5 +1,22 @@
 /** ICONS */
 
+.icon {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    background: $primary-color;
+    width: 30%;
+
+        @include mediaQ--max($bp-sm){
+            width: 25%;
+        }
+
+}
+
+.icon--lg { 
+    width: 80%; 
+}
+
 .icon-bars{
     color: $primary-color;
 }

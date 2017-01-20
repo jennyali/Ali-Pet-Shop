@@ -4,7 +4,9 @@
 
 #myApp {
 
-    .tab-content-col {position: relative}
+    .tab-content-col {
+        position: relative
+    }
 
     .tab-content-img__text-overlay {
         position: absolute;
@@ -12,6 +14,8 @@
         text-align: center;
         transition: opacity 0.5s;
 
-            p {width: 70%}
+            p {
+                width: 70%
+        }
     }
 }

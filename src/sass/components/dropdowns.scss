@@ -14,7 +14,9 @@
     }
     
     // Default state
-    .dropdown-menu > li > a { margin: 5px 0px; }
+    .dropdown-menu > li > a { 
+        margin: 5px 0px; 
+    }
 
     // Hover/Focus state
     .dropdown-menu > li > a {
@@ -38,8 +40,6 @@
         background-color: $dropdown-link-active-bg;
     }
     }
-
-
 }
 
 //* Burger menu */
@@ -50,4 +50,11 @@
     top: 30px;
     right: 30px;
     font-size: $font-size-xlg;
+}
+
+.dropdown-menu {
+    @extend .dropdown-menu;
+    text-align: center;
+    width: 100%;
+    display: inline-block;
 }
