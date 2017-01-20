@@ -44,9 +44,13 @@
                 }
         }
 
-        .li-with-collapse, .list-title { border-bottom: 1px solid $light }
+        .li-with-collapse, .list-title { 
+            border-bottom: 1px solid $light 
+        }
 
-        .active { @include text-color($extra-color) }
+        .active { 
+            @include text-color($extra-color) 
+        }
 
 }
 
@@ -70,9 +74,17 @@
         padding: 0 $mp-default;
     }
 
-    li:first-child {border-right: 1px solid $dark}
+    li:first-child {
+        border-right: 1px solid $dark
+    }
 
-    li:focus, a:focus {outline: none}
+    li:focus, 
+    a:focus {
+        outline: none
+    }
 
-    a:hover, a:focus {color: $primary-color}
+    a:hover, 
+    a:focus {
+        color: $primary-color
+    }
 }

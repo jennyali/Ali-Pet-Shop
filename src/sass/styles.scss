@@ -4,43 +4,12 @@
 @import "../bootstrap-sass-3.3.7/assets/stylesheets/bootstrap";
 //===================================================================//
 
-//========  Helpers ========//
+// main.scss (styles.scss)
 
-@import 'helpers/variables';
-@import 'helpers/mixins';
-@import 'helpers/extends';
-@import 'helpers/animations';
-
-//========  globals =========//
-@import "globals/globals";
-
-//========  Components =====//
-@import "components/nav";
-@import "components/carousel";
-@import "components/parallex";
-@import "components/buttons";
-@import "components/dropdowns";
-@import "components/gallery";
-@import "components/lightbox";
-@import "components/form";
-@import "components/icons";
-@import "components/tabContent";
-@import "components/map";
-
-
-//========  Layout =========//
-@import 'layout/header';
-@import "layout/section";
-@import "layout/footer";
-@import "layout/article";
-
-//========  Pages =========//
-@import "pages/home";
-@import "pages/privateServices";
-
-
-//@import "layout/";
-//@import "components/";
-//@import "globals/";
-//@import "helpers/";
-//@import "pages/";
+@import 'utils/module';
+@import 'base/module';
+@import "components/module";
+@import "layout/module";
+@import "pages/module";
+@import "themes/module";
+@import "vendors/module";
