@@ -106,6 +106,7 @@ $burgerMenu.on({
     }
 });
 
+
 $galleryPhoto.on({
     'click': function() {
         lightboxController(this);
@@ -204,28 +205,27 @@ function burgerMenuController(that) {
 
     if(className === 'icon-bars') {
 
-        $(that).addClass('icon-delete-1')
-               .addClass('cancel-menu-btn');
+        $smScreenNav
+            .removeClass('display--none')
+            .animate({ opacity: 1 }, 'fast');
 
-        $smScreenNav.removeClass('display--none');
-
-        $smScreenNav.animate({
-            opacity: 1
-        });
-
-        $(that).removeClass('icon-bars');
+        $(that)
+            .addClass('icon-delete-1')
+            .addClass('cancel-menu-btn')
+            .removeClass('icon-bars');
 
 
     } else if (className === 'icon-delete-1 cancel-menu-btn') {
         $smScreenNav.animate({
             opacity: 0
-        }, 'slow', function(){
+        }, 'fast', function() {
            return $smScreenNav.addClass('display--none');
         });
 
-        $(that).addClass('icon-bars')
-                .removeClass('icon-delete-1')
-                .removeClass('cancel-menu-btn');
+        $(that)
+            .addClass('icon-bars')
+            .removeClass('icon-delete-1')
+            .removeClass('cancel-menu-btn');
 
     } else {
         console.log('ERROR incorrect class name');
@@ -246,13 +246,13 @@ function lightboxController(that) {
 }
 
 //lightbox btn CONTROLLER
-function lightboxBtnController(boolean){
+function lightboxBtnController(boolean) {
     var id = $lightboxImg.attr('data-id');
     var incrementNumber = boolean;
     var arrayLength = photosArray.length;
     var currentIndexNumber = 0;
 
-    _.each(photosArray, function(photo, index){ // finds matching data-id and increments index number
+    _.each(photosArray, function(photo, index) { // finds matching data-id and increments index number
         var foundItemId = $(photo).attr('data-id');
 
             if(foundItemId === id) {
@@ -279,9 +279,6 @@ function lightboxBtnController(boolean){
     }
 
     var foundPhoto = photosArray[indexNumber];
-    var foundPhotoId = $(foundPhoto).attr('data-id');
-    var foundPhotoSrc = $(foundPhoto).attr('src');
-
     lightboxImgUpdate(foundPhoto);  
 }
 
@@ -290,8 +287,11 @@ function lightboxImgUpdate(that){
     var src = $(that).attr('src');
     var id = $(that).attr('data-id');
 
-    $lightboxImg.attr('src' , src);
-    $lightboxImg.attr('data-id', id);
+    $lightboxImg
+        .attr({
+            'src': src,
+            'data-id': id
+        });
 }
 
 //scroll effect - currently for Staff sub-nav
